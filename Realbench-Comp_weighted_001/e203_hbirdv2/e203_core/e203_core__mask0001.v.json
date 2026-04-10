@@ -1,0 +1,233 @@
+{
+  "file": "e203_hbirdv2/e203_core/e203_core.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_core/e203_core__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000004",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "span_lines": "756-907",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  e203_biu u_e203_biu(\n\n\n    .biu_active             (biu_active),\n\n    .lsu2biu_icb_cmd_valid  (lsu2biu_icb_cmd_valid),\n    .lsu2biu_icb_cmd_ready  (lsu2biu_icb_cmd_ready),\n    .lsu2biu_icb_cmd_addr   (lsu2biu_icb_cmd_addr ),\n    .lsu2biu_icb_cmd_read   (lsu2biu_icb_cmd_read ),\n    .lsu2biu_icb_cmd_wdata  (lsu2biu_icb_cmd_wdata),\n    .lsu2biu_icb_cmd_wmask  (lsu2biu_icb_cmd_wmask),\n    .lsu2biu_icb_cmd_lock   (lsu2biu_icb_cmd_lock ),\n    .lsu2biu_icb_cmd_excl   (lsu2biu_icb_cmd_excl ),\n    .lsu2biu_icb_cmd_size   (lsu2biu_icb_cmd_size ),\n    .lsu2biu_icb_cmd_burst  (2'b0),\n    .lsu2biu_icb_cmd_beat   (2'b0 ),\n\n    .lsu2biu_icb_rsp_valid  (lsu2biu_icb_rsp_valid),\n    .lsu2biu_icb_rsp_ready  (lsu2biu_icb_rsp_ready),\n    .lsu2biu_icb_rsp_err    (lsu2biu_icb_rsp_err  ),\n    .lsu2biu_icb_rsp_excl_ok(lsu2biu_icb_rsp_excl_ok),\n    .lsu2biu_icb_rsp_rdata  (lsu2biu_icb_rsp_rdata),\n\n  `ifdef E203_HAS_MEM_ITF //{\n    .ifu2biu_icb_cmd_valid  (ifu2biu_icb_cmd_valid),\n    .ifu2biu_icb_cmd_ready  (ifu2biu_icb_cmd_ready),\n    .ifu2biu_icb_cmd_addr   (ifu2biu_icb_cmd_addr ),\n    .ifu2biu_icb_cmd_read   (1'b1 ),\n    .ifu2biu_icb_cmd_wdata  (`E203_XLEN'b0),\n    .ifu2biu_icb_cmd_wmask  ({`E203_XLEN/8{1'b0}}),\n    .ifu2biu_icb_cmd_lock   (1'b0 ),\n    .ifu2biu_icb_cmd_excl   (1'b0 ),\n    .ifu2biu_icb_cmd_size   (2'b10),\n    .ifu2biu_icb_cmd_burst  (2'b0),\n    .ifu2biu_icb_cmd_beat   (2'b0),\n    \n    .ifu2biu_icb_rsp_valid  (ifu2biu_icb_rsp_valid),\n    .ifu2biu_icb_rsp_ready  (ifu2biu_icb_rsp_ready),\n    .ifu2biu_icb_rsp_err    (ifu2biu_icb_rsp_err  ),\n    .ifu2biu_icb_rsp_excl_ok(ifu2biu_icb_rsp_excl_ok),\n    .ifu2biu_icb_rsp_rdata  (ifu2biu_icb_rsp_rdata),\n\n  `endif//}\n\n    .ppi_region_indic      (ppi_region_indic ),\n    .ppi_icb_enable        (ppi_icb_enable),\n    .ppi_icb_cmd_valid     (ppi_icb_cmd_valid),\n    .ppi_icb_cmd_ready     (ppi_icb_cmd_ready),\n    .ppi_icb_cmd_addr      (ppi_icb_cmd_addr ),\n    .ppi_icb_cmd_read      (ppi_icb_cmd_read ),\n    .ppi_icb_cmd_wdata     (ppi_icb_cmd_wdata),\n    .ppi_icb_cmd_wmask     (ppi_icb_cmd_wmask),\n    .ppi_icb_cmd_lock      (ppi_icb_cmd_lock ),\n    .ppi_icb_cmd_excl      (ppi_icb_cmd_excl ),\n    .ppi_icb_cmd_size      (ppi_icb_cmd_size ),\n    .ppi_icb_cmd_burst     (),\n    .ppi_icb_cmd_beat      (),\n    \n    .ppi_icb_rsp_valid     (ppi_icb_rsp_valid),\n    .ppi_icb_rsp_ready     (ppi_icb_rsp_ready),\n    .ppi_icb_rsp_err       (ppi_icb_rsp_err  ),\n    .ppi_icb_rsp_excl_ok   (ppi_icb_rsp_excl_ok),\n    .ppi_icb_rsp_rdata     (ppi_icb_rsp_rdata),\n\n\n    .plic_icb_enable        (plic_icb_enable),\n    .plic_region_indic      (plic_region_indic ),\n    .plic_icb_cmd_valid     (plic_icb_cmd_valid),\n    .plic_icb_cmd_ready     (plic_icb_cmd_ready),\n    .plic_icb_cmd_addr      (plic_icb_cmd_addr ),\n    .plic_icb_cmd_read      (plic_icb_cmd_read ),\n    .plic_icb_cmd_wdata     (plic_icb_cmd_wdata),\n    .plic_icb_cmd_wmask     (plic_icb_cmd_wmask),\n    .plic_icb_cmd_lock      (plic_icb_cmd_lock ),\n    .plic_icb_cmd_excl      (plic_icb_cmd_excl ),\n    .plic_icb_cmd_size      (plic_icb_cmd_size ),\n    .plic_icb_cmd_burst     (),\n    .plic_icb_cmd_beat      (),\n    \n    .plic_icb_rsp_valid     (plic_icb_rsp_valid),\n    .plic_icb_rsp_ready     (plic_icb_rsp_ready),\n    .plic_icb_rsp_err       (plic_icb_rsp_err  ),\n    .plic_icb_rsp_excl_ok   (plic_icb_rsp_excl_ok),\n    .plic_icb_rsp_rdata     (plic_icb_rsp_rdata),\n\n    .clint_icb_enable        (clint_icb_enable),\n    .clint_region_indic      (clint_region_indic ),\n    .clint_icb_cmd_valid     (clint_icb_cmd_valid),\n    .clint_icb_cmd_ready     (clint_icb_cmd_ready),\n    .clint_icb_cmd_addr      (clint_icb_cmd_addr ),\n    .clint_icb_cmd_read      (clint_icb_cmd_read ),\n    .clint_icb_cmd_wdata     (clint_icb_cmd_wdata),\n    .clint_icb_cmd_wmask     (clint_icb_cmd_wmask),\n    .clint_icb_cmd_lock      (clint_icb_cmd_lock ),\n    .clint_icb_cmd_excl      (clint_icb_cmd_excl ),\n    .clint_icb_cmd_size      (clint_icb_cmd_size ),\n    .clint_icb_cmd_burst     (),\n    .clint_icb_cmd_beat      (),\n    \n    .clint_icb_rsp_valid     (clint_icb_rsp_valid),\n    .clint_icb_rsp_ready     (clint_icb_rsp_ready),\n    .clint_icb_rsp_err       (clint_icb_rsp_err  ),\n    .clint_icb_rsp_excl_ok   (clint_icb_rsp_excl_ok),\n    .clint_icb_rsp_rdata     (clint_icb_rsp_rdata),\n\n\n  `ifdef E203_HAS_FIO //{\n    .fio_region_indic      (fio_region_indic ),\n    .fio_icb_enable        (fio_icb_enable),\n    .fio_icb_cmd_valid     (fio_icb_cmd_valid),\n    .fio_icb_cmd_ready     (fio_icb_cmd_ready),\n    .fio_icb_cmd_addr      (fio_icb_cmd_addr ),\n    .fio_icb_cmd_read      (fio_icb_cmd_read ),\n    .fio_icb_cmd_wdata     (fio_icb_cmd_wdata),\n    .fio_icb_cmd_wmask     (fio_icb_cmd_wmask),\n    .fio_icb_cmd_lock      (fio_icb_cmd_lock ),\n    .fio_icb_cmd_excl      (fio_icb_cmd_excl ),\n    .fio_icb_cmd_size      (fio_icb_cmd_size ),\n    .fio_icb_cmd_burst     (),\n    .fio_icb_cmd_beat      (),\n    \n    .fio_icb_rsp_valid     (fio_icb_rsp_valid),\n    .fio_icb_rsp_ready     (fio_icb_rsp_ready),\n    .fio_icb_rsp_err       (fio_icb_rsp_err  ),\n    .fio_icb_rsp_excl_ok   (fio_icb_rsp_excl_ok  ),\n    .fio_icb_rsp_rdata     (fio_icb_rsp_rdata),\n  `endif//}\n\n  `ifdef E203_HAS_MEM_ITF //{\n    .mem_icb_enable        (mem_icb_enable),\n    .mem_icb_cmd_valid     (mem_icb_cmd_valid),\n    .mem_icb_cmd_ready     (mem_icb_cmd_ready),\n    .mem_icb_cmd_addr      (mem_icb_cmd_addr ),\n    .mem_icb_cmd_read      (mem_icb_cmd_read ),\n    .mem_icb_cmd_wdata     (mem_icb_cmd_wdata),\n    .mem_icb_cmd_wmask     (mem_icb_cmd_wmask),\n    .mem_icb_cmd_lock      (mem_icb_cmd_lock ),\n    .mem_icb_cmd_excl      (mem_icb_cmd_excl ),\n    .mem_icb_cmd_size      (mem_icb_cmd_size ),\n    .mem_icb_cmd_burst     (mem_icb_cmd_burst),\n    .mem_icb_cmd_beat      (mem_icb_cmd_beat ),\n    \n    .mem_icb_rsp_valid     (mem_icb_rsp_valid),\n    .mem_icb_rsp_ready     (mem_icb_rsp_ready),\n    .mem_icb_rsp_err       (mem_icb_rsp_err  ),\n    .mem_icb_rsp_excl_ok   (mem_icb_rsp_excl_ok  ),\n    .mem_icb_rsp_rdata     (mem_icb_rsp_rdata),\n  `endif//}\n\n    .clk                    (clk_core_biu ),\n    .rst_n                  (rst_n        ) \n  );\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "376-450"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000002",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "486-620"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000003",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "638-753"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000004",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "756-907"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "33-40"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "81-103"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "172-196"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "198-223"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "225-247"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "249-272"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "275-307"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "324-334"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000009",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "357-359"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000010",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "384-398"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000011",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "400-410"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000012",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "431-433"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000013",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "488-495"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000014",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "559-561"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000015",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "603-615"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000016",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "675-693"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000017",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "695-714"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000018",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "732-749"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000019",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "779-798"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000020",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "862-882"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000021",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "884-903"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "325-374"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "454-484"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "622-636"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "31-321"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_core/e203_core.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "1/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

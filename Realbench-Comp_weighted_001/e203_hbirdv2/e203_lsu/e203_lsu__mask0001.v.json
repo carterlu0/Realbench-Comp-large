@@ -1,0 +1,142 @@
+{
+  "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_lsu/e203_lsu__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:inst:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "span_lines": "209-341",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  e203_lsu_ctrl u_e203_lsu_ctrl(\n    .commit_mret           (commit_mret),\n    .commit_trap           (commit_trap),\n    .lsu_ctrl_active       (lsu_ctrl_active),\n  `ifdef E203_HAS_ITCM //{\n    .itcm_region_indic     (itcm_region_indic),\n  `endif//}\n  `ifdef E203_HAS_DTCM //{\n    .dtcm_region_indic     (dtcm_region_indic),\n  `endif//}\n    .lsu_o_valid           (lsu_o_valid ),\n    .lsu_o_ready           (lsu_o_ready ),\n    .lsu_o_wbck_wdat       (lsu_o_wbck_wdat),\n    .lsu_o_wbck_itag       (lsu_o_wbck_itag),\n    .lsu_o_wbck_err        (lsu_o_wbck_err  ),\n    .lsu_o_cmt_buserr      (lsu_o_cmt_buserr  ),\n    .lsu_o_cmt_badaddr     (lsu_o_cmt_badaddr ),\n    .lsu_o_cmt_ld          (lsu_o_cmt_ld ),\n    .lsu_o_cmt_st          (lsu_o_cmt_st ),\n    \n    .agu_icb_cmd_valid     (agu_icb_cmd_valid ),\n    .agu_icb_cmd_ready     (agu_icb_cmd_ready ),\n    .agu_icb_cmd_addr      (agu_icb_cmd_addr ),\n    .agu_icb_cmd_read      (agu_icb_cmd_read   ),\n    .agu_icb_cmd_wdata     (agu_icb_cmd_wdata ),\n    .agu_icb_cmd_wmask     (agu_icb_cmd_wmask ),\n    .agu_icb_cmd_lock      (agu_icb_cmd_lock),\n    .agu_icb_cmd_excl      (agu_icb_cmd_excl),\n    .agu_icb_cmd_size      (agu_icb_cmd_size),\n   \n    .agu_icb_cmd_back2agu  (agu_icb_cmd_back2agu ),\n    .agu_icb_cmd_usign     (agu_icb_cmd_usign),\n    .agu_icb_cmd_itag      (agu_icb_cmd_itag),\n  \n    .agu_icb_rsp_valid     (agu_icb_rsp_valid ),\n    .agu_icb_rsp_ready     (agu_icb_rsp_ready ),\n    .agu_icb_rsp_err       (agu_icb_rsp_err   ),\n    .agu_icb_rsp_excl_ok   (agu_icb_rsp_excl_ok),\n    .agu_icb_rsp_rdata     (agu_icb_rsp_rdata),\n\n`ifdef E203_HAS_NICE//{\n    .nice_mem_holdup        (nice_mem_holdup   ),\n    .nice_icb_cmd_valid     (nice_icb_cmd_valid),\n    .nice_icb_cmd_ready     (nice_icb_cmd_ready),\n    .nice_icb_cmd_addr      (nice_icb_cmd_addr ),\n    .nice_icb_cmd_read      (nice_icb_cmd_read ),\n    .nice_icb_cmd_wdata     (nice_icb_cmd_wdata),\n    .nice_icb_cmd_wmask     (nice_icb_cmd_wmask),\n    .nice_icb_cmd_lock      (1'b0),\n    .nice_icb_cmd_excl      (1'b0),\n    .nice_icb_cmd_size      (nice_icb_cmd_size),\n    \n    .nice_icb_rsp_valid     (nice_icb_rsp_valid),\n    .nice_icb_rsp_ready     (nice_icb_rsp_ready),\n    .nice_icb_rsp_err       (nice_icb_rsp_err  ),\n    .nice_icb_rsp_excl_ok   (nice_icb_rsp_excl_ok  ),\n    .nice_icb_rsp_rdata     (nice_icb_rsp_rdata),\n`endif//}\n\n      `ifdef E203_HAS_DCACHE\n    .dcache_icb_cmd_valid  (dcache_icb_cmd_valid),\n    .dcache_icb_cmd_ready  (dcache_icb_cmd_ready),\n    .dcache_icb_cmd_addr   (dcache_icb_cmd_addr ),\n    .dcache_icb_cmd_read   (dcache_icb_cmd_read ),\n    .dcache_icb_cmd_wdata  (dcache_icb_cmd_wdata),\n    .dcache_icb_cmd_wmask  (dcache_icb_cmd_wmask),\n    .dcache_icb_cmd_lock   (dcache_icb_cmd_lock),\n    .dcache_icb_cmd_excl   (dcache_icb_cmd_excl),\n    .dcache_icb_cmd_size   (dcache_icb_cmd_size),\n    \n    .dcache_icb_rsp_valid  (dcache_icb_rsp_valid),\n    .dcache_icb_rsp_ready  (dcache_icb_rsp_ready),\n    .dcache_icb_rsp_err    (dcache_icb_rsp_err  ),\n    .dcache_icb_rsp_excl_ok(dcache_icb_rsp_excl_ok  ),\n    .dcache_icb_rsp_rdata  (dcache_icb_rsp_rdata),\n      `endif \n\n      `ifdef E203_HAS_DTCM\n    .dtcm_icb_cmd_valid    (dtcm_icb_cmd_valid),\n    .dtcm_icb_cmd_ready    (dtcm_icb_cmd_ready),\n    .dtcm_icb_cmd_addr     (dtcm_icb_cmd_addr ),\n    .dtcm_icb_cmd_read     (dtcm_icb_cmd_read ),\n    .dtcm_icb_cmd_wdata    (dtcm_icb_cmd_wdata),\n    .dtcm_icb_cmd_wmask    (dtcm_icb_cmd_wmask),\n    .dtcm_icb_cmd_lock     (dtcm_icb_cmd_lock),\n    .dtcm_icb_cmd_excl     (dtcm_icb_cmd_excl),\n    .dtcm_icb_cmd_size     (dtcm_icb_cmd_size),\n    \n    .dtcm_icb_rsp_valid    (dtcm_icb_rsp_valid),\n    .dtcm_icb_rsp_ready    (dtcm_icb_rsp_ready),\n    .dtcm_icb_rsp_err      (dtcm_icb_rsp_err  ),\n    .dtcm_icb_rsp_excl_ok  (dtcm_icb_rsp_excl_ok  ),\n    .dtcm_icb_rsp_rdata    (dtcm_icb_rsp_rdata),\n     `endif            \n    \n      `ifdef E203_HAS_ITCM\n    .itcm_icb_cmd_valid    (itcm_icb_cmd_valid),\n    .itcm_icb_cmd_ready    (itcm_icb_cmd_ready),\n    .itcm_icb_cmd_addr     (itcm_icb_cmd_addr ),\n    .itcm_icb_cmd_read     (itcm_icb_cmd_read ),\n    .itcm_icb_cmd_wdata    (itcm_icb_cmd_wdata),\n    .itcm_icb_cmd_wmask    (itcm_icb_cmd_wmask),\n    .itcm_icb_cmd_lock     (itcm_icb_cmd_lock),\n    .itcm_icb_cmd_excl     (itcm_icb_cmd_excl),\n    .itcm_icb_cmd_size     (itcm_icb_cmd_size),\n    \n    .itcm_icb_rsp_valid    (itcm_icb_rsp_valid),\n    .itcm_icb_rsp_ready    (itcm_icb_rsp_ready),\n    .itcm_icb_rsp_err      (itcm_icb_rsp_err  ),\n    .itcm_icb_rsp_excl_ok  (itcm_icb_rsp_excl_ok  ),\n    .itcm_icb_rsp_rdata    (itcm_icb_rsp_rdata),\n      `endif \n    \n    .biu_icb_cmd_valid     (biu_icb_cmd_valid),\n    .biu_icb_cmd_ready     (biu_icb_cmd_ready),\n    .biu_icb_cmd_addr      (biu_icb_cmd_addr ),\n    .biu_icb_cmd_read      (biu_icb_cmd_read ),\n    .biu_icb_cmd_wdata     (biu_icb_cmd_wdata),\n    .biu_icb_cmd_wmask     (biu_icb_cmd_wmask),\n    .biu_icb_cmd_lock      (biu_icb_cmd_lock),\n    .biu_icb_cmd_excl      (biu_icb_cmd_excl),\n    .biu_icb_cmd_size      (biu_icb_cmd_size),\n   \n    .biu_icb_rsp_valid     (biu_icb_rsp_valid),\n    .biu_icb_rsp_ready     (biu_icb_rsp_ready),\n    .biu_icb_rsp_err       (biu_icb_rsp_err  ),\n    .biu_icb_rsp_excl_ok   (biu_icb_rsp_excl_ok  ),\n    .biu_icb_rsp_rdata     (biu_icb_rsp_rdata),\n \n\n    .clk                   (clk),\n    .rst_n                 (rst_n)\n  );\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:assign:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "343-346"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:inst:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "209-341"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "34-36"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "37-39"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "87-109"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "112-134"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "158-176"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "182-204"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "213-215"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "216-218"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000009",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "249-266"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000010",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "268-284"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000011",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "286-302"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000012",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "304-320"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "188-206"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "29-179"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_lsu/e203_lsu.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 2,
+  "variant_id": "1/2",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

@@ -1,0 +1,85 @@
+{
+  "file": "aes/aes_rcon/aes_rcon.v",
+  "variant_index": 1,
+  "output_file": "aes/aes_rcon/aes_rcon__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "function",
+      "question_type": "function",
+      "id": "aes/aes_rcon/aes_rcon.v:function:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "span_lines": "76-91",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "function [31:0]\tfrcon;\ninput\t[3:0]\ti;\ncase(i)\t// synopsys parallel_case\n   4'h0: frcon=32'h01_00_00_00;\n   4'h1: frcon=32'h02_00_00_00;\n   4'h2: frcon=32'h04_00_00_00;\n   4'h3: frcon=32'h08_00_00_00;\n   4'h4: frcon=32'h10_00_00_00;\n   4'h5: frcon=32'h20_00_00_00;\n   4'h6: frcon=32'h40_00_00_00;\n   4'h7: frcon=32'h80_00_00_00;\n   4'h8: frcon=32'h1b_00_00_00;\n   4'h9: frcon=32'h36_00_00_00;\n   default: frcon=32'h00_00_00_00;\nendcase\nendfunction\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_rcon/aes_rcon.v:proc:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "67-69"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_rcon/aes_rcon.v:proc:000002",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "72-74"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_rcon/aes_rcon.v:assign:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "71-71"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "aes/aes_rcon/aes_rcon.v:case:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "78-90"
+    },
+    {
+      "kind": "block",
+      "type": "function",
+      "id": "aes/aes_rcon/aes_rcon.v:function:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "76-91"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "aes/aes_rcon/aes_rcon.v:grp:counter_cluster:000002",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "67-74"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "aes/aes_rcon/aes_rcon.v:grp:internal_signal:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "63-65"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "aes/aes_rcon/aes_rcon.v:grp:port_section:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "60-62"
+    }
+  ],
+  "related_docs": [
+    "aes/aes_rcon/aes_rcon.md"
+  ],
+  "variants_for_source_file": 5,
+  "variant_id": "1/5",
+  "effective_max_variants_per_file": 5,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

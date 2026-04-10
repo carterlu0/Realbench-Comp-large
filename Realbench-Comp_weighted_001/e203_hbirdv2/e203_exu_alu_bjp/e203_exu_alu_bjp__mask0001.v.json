@@ -1,0 +1,205 @@
+{
+  "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "question_type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "span_lines": "98-125",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign bjp_req_alu_op1 = wbck_link ? \n                            bjp_i_pc \n                          : bjp_i_rs1;\n  assign bjp_req_alu_op2 = wbck_link ? \n                            (rv32 ? `E203_XLEN'd4 : `E203_XLEN'd2)\n                          : bjp_i_rs2;\n\n  assign bjp_o_cmt_bjp = bxx | jump;\n  assign bjp_o_cmt_mret = mret;\n  assign bjp_o_cmt_dret = dret;\n  assign bjp_o_cmt_fencei = fencei;\n\n  assign bjp_req_alu_cmp_eq  = bjp_i_info [`E203_DECINFO_BJP_BEQ  ]; \n  assign bjp_req_alu_cmp_ne  = bjp_i_info [`E203_DECINFO_BJP_BNE  ]; \n  assign bjp_req_alu_cmp_lt  = bjp_i_info [`E203_DECINFO_BJP_BLT  ]; \n  assign bjp_req_alu_cmp_gt  = bjp_i_info [`E203_DECINFO_BJP_BGT  ]; \n  assign bjp_req_alu_cmp_ltu = bjp_i_info [`E203_DECINFO_BJP_BLTU ]; \n  assign bjp_req_alu_cmp_gtu = bjp_i_info [`E203_DECINFO_BJP_BGTU ]; \n\n  assign bjp_req_alu_add  = wbck_link;\n\n  assign bjp_o_valid     = bjp_i_valid;\n  assign bjp_i_ready     = bjp_o_ready;\n  assign bjp_o_cmt_prdt  = bjp_i_bprdt;\n  assign bjp_o_cmt_rslv  = jump ? 1'b1 : bjp_req_alu_cmp_res;\n\n  assign bjp_o_wbck_wdat  = bjp_req_alu_add_res;\n  assign bjp_o_wbck_err   = 1'b0;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000001",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "98-100"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000002",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "101-103"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000003",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "105-105"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000004",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "106-106"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000005",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "107-107"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000006",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "108-108"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000007",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "110-110"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000008",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "111-111"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000009",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "112-112"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000010",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "113-113"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000011",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "114-114"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000012",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "115-115"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000013",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "117-117"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000014",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "119-119"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000015",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "120-120"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000016",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "121-121"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000017",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "122-122"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000018",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "124-124"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:assign:000019",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "125-125"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "98-125"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "98-103"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:handshake:000002",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "110-120"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:handshake:000003",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "122-124"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "87-96"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v",
+      "lines": "33-83"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 1,
+  "variant_id": "1/1",
+  "effective_max_variants_per_file": 4,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

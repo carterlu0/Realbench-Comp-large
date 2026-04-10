@@ -1,0 +1,142 @@
+{
+  "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+  "variant_index": 2,
+  "output_file": "e203_hbirdv2/e203_lsu/e203_lsu__mask0002.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:assign:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "span_lines": "343-346",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign lsu_active = lsu_ctrl_active \n                    // When interrupts comes, need to update the exclusive monitor\n                    // so also need to turn on the clock\n                    | excp_active;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:assign:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "343-346"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:inst:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "209-341"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "34-36"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "37-39"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "87-109"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "112-134"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "158-176"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "182-204"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "213-215"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "216-218"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000009",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "249-266"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000010",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "268-284"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000011",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "286-302"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:pp_blk:000012",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "304-320"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "188-206"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_lsu/e203_lsu.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_lsu/e203_lsu.v",
+      "lines": "29-179"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_lsu/e203_lsu.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 2,
+  "variant_id": "2/2",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

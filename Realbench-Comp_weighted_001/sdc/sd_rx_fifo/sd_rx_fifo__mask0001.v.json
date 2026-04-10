@@ -1,0 +1,197 @@
+{
+  "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_rx_fifo/sd_rx_fifo__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "always",
+      "question_type": "always",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:proc:000003",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "span_lines": "81-83",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "   always @ (posedge wclk)\n     if (ram_we)\n       ram[adr_i[`FIFO_RX_MEM_ADR_SIZE-2:0]] <= ram_din;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:proc:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "23-28"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:proc:000002",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "30-77"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:proc:000003",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "81-83"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:proc:000004",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "84-94"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:proc:000005",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "96-107"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:assign:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "79-79"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:assign:000002",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "80-80"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:assign:000003",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "116-116"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:assign:000004",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "117-117"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:assign:000005",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "119-119"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:assign:000006",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "120-120"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:begin_end:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "31-34"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:begin_end:000002",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "39-41"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:begin_end:000003",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "72-75"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:begin_end:000004",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "36-77"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:begin_end:000005",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "89-92"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:begin_end:000006",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "102-105"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:pp_blk:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "37-56"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:pp_blk:000002",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "57-76"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:grp:assign_cluster:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "79-80"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:grp:assign_cluster:000002",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "116-120"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:grp:internal_signal:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "16-22"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:grp:port_section:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "5-14"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_rx_fifo/sd_rx_fifo.v:grp:reg_cluster:000001",
+      "file": "sdc/sd_rx_fifo/sd_rx_fifo.v",
+      "lines": "23-77"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_rx_fifo/sd_rx_fifo.md"
+  ],
+  "variants_for_source_file": 5,
+  "variant_id": "1/5",
+  "effective_max_variants_per_file": 5,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

@@ -1,0 +1,203 @@
+{
+  "mode": "weighted",
+  "task_scope": "core60",
+  "main_eval_filter": "strict",
+  "main_eval_filter_active": true,
+  "main_eval_excluded_group_types": [
+    "internal_signal",
+    "param_decl",
+    "port_section"
+  ],
+  "main_eval_excluded_block_types": [],
+  "main_eval_excluded_block_prefixes": [
+    "pp_"
+  ],
+  "main_eval_weak_file_type_exclusions": {
+    "aes/aes_cipher_top/aes_cipher_top.v": [
+      "always"
+    ],
+    "aes/aes_inv_cipher_top/aes_inv_cipher_top.v": [
+      "counter_cluster"
+    ],
+    "aes/aes_key_expand_128/aes_key_expand_128.v": [
+      "assign_cluster",
+      "instantiation",
+      "reg_cluster"
+    ],
+    "e203_hbirdv2/e203_biu/e203_biu.v": [
+      "handshake"
+    ],
+    "e203_hbirdv2/e203_cpu/e203_cpu.v": [
+      "instantiation"
+    ],
+    "e203_hbirdv2/e203_dtcm_ram/e203_dtcm_ram.v": [
+      "instantiation"
+    ],
+    "e203_hbirdv2/e203_exu_alu_csrctrl/e203_exu_alu_csrctrl.v": [
+      "assign"
+    ],
+    "e203_hbirdv2/e203_exu_alu_lsuagu/e203_exu_alu_lsuagu.v": [
+      "bus_cluster"
+    ],
+    "e203_hbirdv2/e203_exu_decode/e203_exu_decode.v": [
+      "assign"
+    ],
+    "e203_hbirdv2/e203_exu_excp/e203_exu_excp.v": [
+      "assign"
+    ],
+    "e203_hbirdv2/e203_exu_longpwbck/e203_exu_longpwbck.v": [
+      "assign"
+    ],
+    "e203_hbirdv2/e203_exu_regfile/e203_exu_regfile.v": [
+      "assign",
+      "instantiation"
+    ],
+    "e203_hbirdv2/e203_irq_sync/e203_irq_sync.v": [
+      "assign_cluster"
+    ],
+    "e203_hbirdv2/e203_itcm_ram/e203_itcm_ram.v": [
+      "instantiation"
+    ],
+    "e203_hbirdv2/e203_lsu_ctrl/e203_lsu_ctrl.v": [
+      "instantiation"
+    ],
+    "e203_hbirdv2/e203_srams/e203_srams.v": [
+      "instantiation"
+    ],
+    "sdc/sd_bd/sd_bd.v": [
+      "begin_end"
+    ],
+    "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v": [
+      "always",
+      "assign",
+      "instantiation"
+    ]
+  },
+  "main_eval_file_max_variants": {
+    "aes/aes_cipher_top/aes_cipher_top.v": 6,
+    "aes/aes_key_expand_128/aes_key_expand_128.v": 4,
+    "e203_hbirdv2/e203_exu_alu/e203_exu_alu.v": 5,
+    "e203_hbirdv2/e203_exu_decode/e203_exu_decode.v": 4,
+    "e203_hbirdv2/e203_exu_excp/e203_exu_excp.v": 4,
+    "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v": 2
+  },
+  "input_dir": "annotated_units",
+  "files_total": 60,
+  "files_total_scanned": 82,
+  "files_in_scope": 60,
+  "files_skipped_by_scope": 22,
+  "files_with_candidates": 56,
+  "total_candidate_spans": 1676,
+  "adaptive_variant_policy": "maincore_rich_v3",
+  "adaptive_base_max_variants_per_file": 3,
+  "adaptive_max_variants_per_file": 7,
+  "projected_total_variant_budget": 262,
+  "projected_variant_cap_distribution": {
+    "2": 1,
+    "3": 14,
+    "4": 19,
+    "5": 4,
+    "6": 9,
+    "7": 5,
+    "8": 3,
+    "9": 1
+  },
+  "projected_variant_cap_by_file": {
+    "aes/aes_cipher_top/aes_cipher_top.v": 6,
+    "aes/aes_inv_cipher_top/aes_inv_cipher_top.v": 9,
+    "aes/aes_inv_sbox/aes_inv_sbox.v": 4,
+    "aes/aes_key_expand_128/aes_key_expand_128.v": 4,
+    "aes/aes_rcon/aes_rcon.v": 5,
+    "aes/aes_sbox/aes_sbox.v": 4,
+    "e203_hbirdv2/e203_biu/e203_biu.v": 4,
+    "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v": 3,
+    "e203_hbirdv2/e203_clkgate/e203_clkgate.v": 3,
+    "e203_hbirdv2/e203_core/e203_core.v": 3,
+    "e203_hbirdv2/e203_cpu/e203_cpu.v": 3,
+    "e203_hbirdv2/e203_cpu_top/e203_cpu_top.v": 3,
+    "e203_hbirdv2/e203_dtcm_ctrl/e203_dtcm_ctrl.v": 4,
+    "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v": 3,
+    "e203_hbirdv2/e203_exu/e203_exu.v": 3,
+    "e203_hbirdv2/e203_exu_alu/e203_exu_alu.v": 5,
+    "e203_hbirdv2/e203_exu_alu_bjp/e203_exu_alu_bjp.v": 4,
+    "e203_hbirdv2/e203_exu_alu_csrctrl/e203_exu_alu_csrctrl.v": 4,
+    "e203_hbirdv2/e203_exu_alu_dpath/e203_exu_alu_dpath.v": 6,
+    "e203_hbirdv2/e203_exu_alu_lsuagu/e203_exu_alu_lsuagu.v": 7,
+    "e203_hbirdv2/e203_exu_alu_rglr/e203_exu_alu_rglr.v": 3,
+    "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v": 4,
+    "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v": 3,
+    "e203_hbirdv2/e203_exu_csr/e203_exu_csr.v": 6,
+    "e203_hbirdv2/e203_exu_decode/e203_exu_decode.v": 4,
+    "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v": 4,
+    "e203_hbirdv2/e203_exu_excp/e203_exu_excp.v": 4,
+    "e203_hbirdv2/e203_exu_longpwbck/e203_exu_longpwbck.v": 4,
+    "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v": 4,
+    "e203_hbirdv2/e203_exu_oitf/e203_exu_oitf.v": 6,
+    "e203_hbirdv2/e203_exu_regfile/e203_exu_regfile.v": 5,
+    "e203_hbirdv2/e203_exu_wbck/e203_exu_wbck.v": 4,
+    "e203_hbirdv2/e203_ifu/e203_ifu.v": 3,
+    "e203_hbirdv2/e203_ifu_ifetch/e203_ifu_ifetch.v": 6,
+    "e203_hbirdv2/e203_ifu_ift2icb/e203_ifu_ift2icb.v": 6,
+    "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v": 3,
+    "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v": 3,
+    "e203_hbirdv2/e203_irq_sync/e203_irq_sync.v": 7,
+    "e203_hbirdv2/e203_itcm_ctrl/e203_itcm_ctrl.v": 4,
+    "e203_hbirdv2/e203_lsu/e203_lsu.v": 3,
+    "e203_hbirdv2/e203_lsu_ctrl/e203_lsu_ctrl.v": 7,
+    "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v": 6,
+    "sdc/sd_bd/sd_bd.v": 5,
+    "sdc/sd_clock_divider/sd_clock_divider.v": 4,
+    "sdc/sd_cmd_master/sd_cmd_master.v": 8,
+    "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v": 7,
+    "sdc/sd_controller_wb/sd_controller_wb.v": 7,
+    "sdc/sd_crc_16/sd_crc_16.v": 4,
+    "sdc/sd_crc_7/sd_crc_7.v": 4,
+    "sdc/sd_data_master/sd_data_master.v": 8,
+    "sdc/sd_data_serial_host/sd_data_serial_host.v": 8,
+    "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v": 4,
+    "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v": 2,
+    "sdc/sd_rx_fifo/sd_rx_fifo.v": 6,
+    "sdc/sd_tx_fifo/sd_tx_fifo.v": 6,
+    "sdc/sdc_controller/sdc_controller.v": 3
+  },
+  "candidate_span_count_by_type": {
+    "always": 144,
+    "assign": 741,
+    "assign_cluster": 136,
+    "begin_end": 364,
+    "bus_cluster": 27,
+    "case": 14,
+    "counter_cluster": 12,
+    "fsm": 4,
+    "function": 25,
+    "generate": 12,
+    "handshake": 60,
+    "instantiation": 123,
+    "reg_cluster": 14
+  },
+  "candidate_unique_unit_count_by_type": {
+    "always": 95,
+    "assign": 741,
+    "assign_cluster": 136,
+    "begin_end": 238,
+    "bus_cluster": 27,
+    "case": 14,
+    "counter_cluster": 12,
+    "fsm": 4,
+    "function": 9,
+    "generate": 6,
+    "handshake": 60,
+    "instantiation": 123,
+    "reg_cluster": 14
+  },
+  "candidate_count_by_kind": {
+    "block": 1423,
+    "group": 253
+  },
+  "candidate_count_by_region": {
+    "body_to_tail": 190,
+    "head_to_tail": 7,
+    "whole": 1479
+  }
+}
+

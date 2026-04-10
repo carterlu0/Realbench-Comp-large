@@ -1,0 +1,421 @@
+{
+  "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+  "variant_index": 5,
+  "output_file": "sdc/sd_cmd_master/sd_cmd_master__mask0005.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "question_type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000033",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "span_lines": "301-305",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "           if (index_check_enable &  (cmd_out[37:32] != cmd_in [37:32]) ) begin\n            `CIE=1;\n            `EI = 1;\n            \n           end\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:proc:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "91-101"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:proc:000002",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "106-125"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:proc:000003",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "129-141"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:proc:000004",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "145-178"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:proc:000005",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "183-191"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:proc:000006",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "195-323"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "93-96"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000002",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "97-100"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000003",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "92-101"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000004",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "108-111"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000005",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "113-116"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000006",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "112-124"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000007",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "107-125"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000008",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "131-134"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000009",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "135-138"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000010",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "130-141"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000011",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "151-153"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000012",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "154-156"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000013",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "150-157"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000014",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "158-163"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000015",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "165-167"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000016",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "168-170"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000017",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "164-171"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000018",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "146-178"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000019",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "185-187"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000020",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "188-190"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000021",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "184-191"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000022",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "197-218"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000023",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "229-234"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000024",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "224-235"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000025",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "244-246"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000026",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "247-249"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000027",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "250-252"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000028",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "236-266"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000029",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "273-275"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000030",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "270-277"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000031",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "284-286"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000032",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "296-300"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000033",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "301-305"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000034",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "292-314"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000035",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "288-315"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000036",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "268-316"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000037",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "219-322"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:begin_end:000038",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "196-323"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:case:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "149-176"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:case:000002",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "223-317"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:counter_cluster:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "195-323"
+    },
+    {
+      "kind": "group",
+      "type": "fsm",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:fsm:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "145-191"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:internal_signal:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "63-75"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:internal_signal:000002",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "80-81"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:internal_signal:000003",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "86-89"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:param_decl:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "43-58"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:param_decl:000002",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "79-79"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:param_decl:000003",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "83-85"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:port_section:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "3-32"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_cmd_master/sd_cmd_master.v:grp:reg_cluster:000001",
+      "file": "sdc/sd_cmd_master/sd_cmd_master.v",
+      "lines": "91-141"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_cmd_master/sd_cmd_master.md"
+  ],
+  "variants_for_source_file": 14,
+  "variant_id": "5/14",
+  "effective_max_variants_per_file": 14,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

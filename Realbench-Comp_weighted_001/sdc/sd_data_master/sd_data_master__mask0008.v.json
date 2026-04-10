@@ -1,0 +1,701 @@
+{
+  "file": "sdc/sd_data_master/sd_data_master.v",
+  "variant_index": 8,
+  "output_file": "sdc/sd_data_master/sd_data_master__mask0008.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "case",
+      "question_type": "case",
+      "id": "sdc/sd_data_master/sd_data_master.v:case:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "span_lines": "115-201",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "case(state)  \n  \n  IDLE: begin\n   if (free_tx_bd !=`BD_EMPTY)begin\n      next_state = GET_TX_BD;\n   end\n   else if (free_rx_bd !=`BD_EMPTY) begin\n      next_state = GET_RX_BD;\n   end  \n   else begin\n      next_state = IDLE;\n   end\n  end\n  GET_TX_BD: begin\n    if ( ( bd_cnt> `READ_CYCLE-1) && (tx_full==1) )begin\n     next_state = SEND_CMD;\n    end   \n    else begin\n     next_state = GET_TX_BD;\n    end\n  end   \n  \n  GET_RX_BD: begin  \n    if (bd_cnt >= (`READ_CYCLE-1))begin\n     next_state = SEND_CMD;\n    end   \n    else begin\n     next_state = GET_RX_BD;\n    end\n  end\n  \n  SEND_CMD: begin \n   if (send_done)begin\n     next_state = RECIVE_CMD;\n    end   \n    else begin\n     next_state = SEND_CMD;\n    end \n  end\n    \n  \n RECIVE_CMD: begin \n    if (rec_done)\n      next_state = DATA_TRANSFER;       \n    else if (rec_failed)\n      next_state =  SEND_CMD;\n    else \n      next_state = RECIVE_CMD;    \n   end \n\n  DATA_TRANSFER: begin\n    if (trans_done)\n      next_state = IDLE;\n   else if (trans_failed)\n      next_state = STOP;\n   else\n      next_state = DATA_TRANSFER;\n   end\n  \n  STOP: begin \n     next_state = STOP_SEND;     \n   end\n   \n   STOP_SEND: begin\n    if (send_done)begin\n     next_state =IDLE;\n    end   \n    else begin\n     next_state = STOP_SEND;\n    end  \n   end\n   \n  //  STOP_RECIVE_CMD : begin\n  //   if (rec_done)\n  //     next_state = SEND_CMD;       \n  //   else if (rec_failed)\n  //     next_state =  STOP;\n  //   else if (resend_try_cnt>=`RESEND_MAX_CNT)\n  //     next_state = IDLE;\n  //   else \n  //     next_state = STOP_RECIVE_CMD;    \n  //  end \n \n   \n \n default : next_state  = IDLE; \n endcase\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_master/sd_data_master.v:proc:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "95-107"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_master/sd_data_master.v:proc:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "112-203"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_master/sd_data_master.v:proc:000003",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "206-214"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_master/sd_data_master.v:proc:000004",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "221-508"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "97-100"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "101-104"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000003",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "96-107"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000004",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "118-120"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000005",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "121-123"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000006",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "124-126"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000007",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "117-127"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000008",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "129-131"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000009",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "132-134"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000010",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "128-135"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000011",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "138-140"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000012",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "141-143"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000013",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "137-144"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000014",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "147-149"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000015",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "150-152"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000016",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "146-153"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000017",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "156-163"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000018",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "165-172"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000019",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "174-176"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000020",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "179-181"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000021",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "182-184"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000022",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "178-185"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000023",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "113-203"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000024",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "208-210"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000025",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "211-213"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000026",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "207-214"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000027",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "223-249"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000028",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "252-272"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000029",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "279-282"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000030",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "283-286"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000031",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "278-287"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000032",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "293-295"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000033",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "296-298"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000034",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "299-302"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000035",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "303-306"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000036",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "292-308"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000037",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "274-320"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000038",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "331-334"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000039",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "335-339"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000040",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "329-340"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000041",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "346-348"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000042",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "349-351"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000043",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "352-355"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000044",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "356-361"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000045",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "344-362"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000046",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "322-369"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000047",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "373-376"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000048",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "377-380"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000049",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "383-386"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000050",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "387-391"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000051",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "371-392"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000052",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "413-417"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000053",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "409-424"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000054",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "408-426"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000055",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "427-430"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000056",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "405-431"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000057",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "395-432"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000058",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "437-440"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000059",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "436-441"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000060",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "443-446"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000061",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "442-447"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000062",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "453-456"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000063",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "460-464"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000064",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "465-469"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000065",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "457-472"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000066",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "450-474"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000067",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "434-475"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000068",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "476-488"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000069",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "489-497"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000070",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "250-506"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_master/sd_data_master.v:begin_end:000071",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "222-508"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_data_master/sd_data_master.v:case:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "115-201"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_data_master/sd_data_master.v:case:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "251-503"
+    },
+    {
+      "kind": "block",
+      "type": "pp_else_branch",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000001:br:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "57-60"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "53-61"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "277-288"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000003",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "291-309"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000004",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "328-341"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000005",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "343-363"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_data_master/sd_data_master.v:pp_blk:000001:br:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "53-56"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:counter_cluster:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "112-203"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:counter_cluster:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "221-508"
+    },
+    {
+      "kind": "group",
+      "type": "fsm",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:fsm:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "112-214"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:internal_signal:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "55-69"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:internal_signal:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "78-79"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:internal_signal:000003",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "90-93"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:param_decl:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "52-54"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:param_decl:000002",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "56-58"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:param_decl:000003",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "60-62"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:param_decl:000004",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "71-77"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:param_decl:000005",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "80-88"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_data_master/sd_data_master.v:grp:port_section:000001",
+      "file": "sdc/sd_data_master/sd_data_master.v",
+      "lines": "4-50"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_data_master/sd_data_master.md"
+  ],
+  "variants_for_source_file": 13,
+  "variant_id": "8/13",
+  "effective_max_variants_per_file": 13,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

@@ -1,0 +1,610 @@
+{
+  "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+  "variant_index": 6,
+  "output_file": "sdc/sd_data_serial_host/sd_data_serial_host__mask0006.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "always",
+      "question_type": "fsm_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:proc:000003",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "span_lines": "128-140",
+      "region": "body_to_tail",
+      "parent_group_type": "fsm",
+      "parent_group_id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:fsm:000001",
+      "answer": " begin :START_SYNC\n  if (rst ) begin\n    q_start_bit<=1;\n end \n else begin\n    if (!DAT_dat_i[0] & state == READ_WAIT)\n    q_start_bit <= 0;\n    else\n    q_start_bit <= 1;\n    \n end\nend\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:proc:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "58-67"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:proc:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "70-126"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:proc:000003",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "128-140"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:proc:000004",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "144-152"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:proc:000005",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "161-440"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "51-53"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "60-62"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000003",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "63-66"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000004",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "59-67"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000005",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "74-81"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000006",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "82-89"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000007",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "91-97"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000008",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "98-103"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000009",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "105-110"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000010",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "112-119"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000011",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "71-126"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000012",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "130-132"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000013",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "133-139"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000014",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "129-140"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000015",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "146-148"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000016",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "149-151"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000017",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "145-152"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000018",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "163-187"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000019",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "190-206"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000020",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "216-224"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000021",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "231-248"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000022",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "253-256"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000023",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "257-260"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000024",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "261-264"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000025",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "265-268"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000026",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "269-272"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000027",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "273-276"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000028",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "277-281"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000029",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "282-285"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000030",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "288-291"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000031",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "292-295"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000032",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "296-299"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000033",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "300-303"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000034",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "304-307"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000035",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "308-311"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000036",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "312-316"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000037",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "317-320"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000038",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "331-333"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000039",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "249-334"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000040",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "335-344"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000041",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "345-349"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000042",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "350-353"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000043",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "207-354"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000044",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "355-361"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000045",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "362-372"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000046",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "373-381"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000047",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "386-394"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000048",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "422-426"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000049",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "400-427"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000050",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "395-428"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000051",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "383-432"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000052",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "188-438"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:begin_end:000053",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "162-440"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:case:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "73-125"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:case:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "251-324"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:case:000003",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "189-436"
+    },
+    {
+      "kind": "block",
+      "type": "generate",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:generate:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "50-54"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:inst:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "52-52"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "235-238"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "239-242"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000003",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "252-286"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000004",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "287-321"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000005",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "403-406"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000006",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "408-418"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:pp_blk:000007",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "419-421"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:counter_cluster:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "70-126"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:counter_cluster:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "161-440"
+    },
+    {
+      "kind": "group",
+      "type": "fsm",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:fsm:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "70-152"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:internal_signal:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "30-36"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:internal_signal:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "38-39"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:internal_signal:000003",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "46-47"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:internal_signal:000004",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "56-57"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:internal_signal:000005",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "69-69"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:internal_signal:000006",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "154-159"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:param_decl:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "37-37"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:param_decl:000002",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "40-45"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:port_section:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "7-26"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_data_serial_host/sd_data_serial_host.v:grp:reg_cluster:000001",
+      "file": "sdc/sd_data_serial_host/sd_data_serial_host.v",
+      "lines": "128-152"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_data_serial_host/sd_data_serial_host.md"
+  ],
+  "variants_for_source_file": 13,
+  "variant_id": "6/13",
+  "effective_max_variants_per_file": 13,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

@@ -1,0 +1,177 @@
+{
+  "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+  "variant_index": 4,
+  "output_file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv__mask0004.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000006",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "span_lines": "108-114",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign brchmis_flush_pc = \n                                // The fenceI is also need to trigger the flush to its next instructions\n                          (cmt_i_fencei | (cmt_i_bjp & cmt_i_bjp_prdt)) ? (cmt_i_pc + (cmt_i_rv32 ? `E203_PC_SIZE'd4 : `E203_PC_SIZE'd2)) :\n                          (cmt_i_bjp & (~cmt_i_bjp_prdt)) ? (cmt_i_pc + cmt_i_imm[`E203_PC_SIZE-1:0]) :\n                          cmt_i_dret ? csr_dpc_r :\n                          //cmt_i_mret ? csr_epc_r :\n                                       csr_epc_r ;// Last condition cmt_i_mret commented\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000001",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "69-69"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000002",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "70-70"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000003",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "94-94"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000004",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "102-102"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000005",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "103-105"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000006",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "108-114"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000007",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "119-119"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000008",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "120-120"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000009",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "121-121"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:assign:000010",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "123-128"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "54-56"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "106-116"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "69-70"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:assign_cluster:000002",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "94-105"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:assign_cluster:000003",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "119-128"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "69-70"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "66-67"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "77-77"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "87-87"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:internal_signal:000004",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "118-118"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.v",
+      "lines": "31-63"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_exu_branchslv/e203_exu_branchslv.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 4,
+  "variant_id": "4/4",
+  "effective_max_variants_per_file": 4,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

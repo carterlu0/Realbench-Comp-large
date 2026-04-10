@@ -1,0 +1,51 @@
+{
+  "file": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v:inst:000001",
+      "file": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v",
+      "span_lines": "60-109",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  e203_exu_decode u_e203_exu_decode(\n\n  .i_instr(instr),\n  .i_pc(`E203_PC_SIZE'b0),\n  .i_prdt_taken(1'b0), \n  .i_muldiv_b2b(1'b0), \n\n  .i_misalgn (1'b0),\n  .i_buserr  (1'b0),\n\n  .dbg_mode  (1'b0),\n\n  .dec_misalgn(),\n  .dec_buserr(),\n  .dec_ilegl(),\n\n  .dec_rs1x0(),\n  .dec_rs2x0(),\n  .dec_rs1en(dec_rs1en),\n  .dec_rs2en(dec_rs2en),\n  .dec_rdwen(),\n  .dec_rs1idx(dec_rs1idx),\n  .dec_rs2idx(dec_rs2idx),\n  .dec_rdidx(),\n  .dec_info(),  \n  .dec_imm(),\n  .dec_pc(),\n\n`ifdef E203_HAS_NICE//{\n  .dec_nice   (),\n  .nice_xs_off(1'b0),  \n  .nice_cmt_off_ilgl_o(),\n`endif//}\n\n  .dec_mulhsu(dec_mulhsu),\n  .dec_mul   (dec_mul   ),\n  .dec_div   (dec_div   ),\n  .dec_rem   (dec_rem   ),\n  .dec_divu  (dec_divu  ),\n  .dec_remu  (dec_remu  ),\n\n  .dec_rv32(dec_rv32),\n  .dec_bjp (dec_bjp ),\n  .dec_jal (dec_jal ),\n  .dec_jalr(dec_jalr),\n  .dec_bxx (dec_bxx ),\n\n  .dec_jalr_rs1idx(dec_jalr_rs1idx),\n  .dec_bjp_imm    (dec_bjp_imm    )  \n  );\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v:inst:000001",
+      "file": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v",
+      "lines": "60-109"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v",
+      "lines": "88-92"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.v",
+      "lines": "29-57"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_ifu_minidec/e203_ifu_minidec.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 1,
+  "variant_id": "1/1",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

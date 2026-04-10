@@ -1,0 +1,275 @@
+{
+  "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+  "variant_index": 3,
+  "output_file": "e203_hbirdv2/e203_exu/e203_exu__mask0003.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000006",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "span_lines": "666-712",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  e203_exu_longpwbck u_e203_exu_longpwbck(\n\n    .lsu_wbck_i_valid   (lsu_o_valid ),\n    .lsu_wbck_i_ready   (lsu_o_ready ),\n    .lsu_wbck_i_wdat    (lsu_o_wbck_wdat  ),\n    .lsu_wbck_i_itag    (lsu_o_wbck_itag  ),\n    .lsu_wbck_i_err     (lsu_o_wbck_err   ),\n    .lsu_cmt_i_ld       (lsu_o_cmt_ld     ),\n    .lsu_cmt_i_st       (lsu_o_cmt_st     ),\n    .lsu_cmt_i_badaddr  (lsu_o_cmt_badaddr),\n    .lsu_cmt_i_buserr   (lsu_o_cmt_buserr ),\n\n    .longp_wbck_o_valid   (longp_wbck_o_valid ), \n    .longp_wbck_o_ready   (longp_wbck_o_ready ),\n    .longp_wbck_o_wdat    (longp_wbck_o_wdat  ),\n    .longp_wbck_o_rdidx   (longp_wbck_o_rdidx ),\n    .longp_wbck_o_rdfpu   (longp_wbck_o_rdfpu ),\n    .longp_wbck_o_flags   (longp_wbck_o_flags ),\n\n    .longp_excp_o_ready   (longp_excp_o_ready  ),\n    .longp_excp_o_valid   (longp_excp_o_valid  ),\n    .longp_excp_o_ld      (longp_excp_o_ld     ),\n    .longp_excp_o_st      (longp_excp_o_st     ),\n    .longp_excp_o_buserr  (longp_excp_o_buserr ),\n    .longp_excp_o_badaddr (longp_excp_o_badaddr),\n    .longp_excp_o_insterr (longp_excp_o_insterr),\n    .longp_excp_o_pc      (longp_excp_o_pc),\n\n    .oitf_ret_rdidx      (oitf_ret_rdidx),\n    .oitf_ret_rdwen      (oitf_ret_rdwen),\n    .oitf_ret_rdfpu      (oitf_ret_rdfpu),\n    .oitf_ret_pc         (oitf_ret_pc),\n    .oitf_empty          (oitf_empty    ),\n    .oitf_ret_ptr        (oitf_ret_ptr  ),\n    .oitf_ret_ena        (oitf_ret_ena  ),\n\n  `ifdef E203_HAS_NICE//{\n    .nice_longp_wbck_i_valid    (nice_longp_wbck_valid), \n    .nice_longp_wbck_i_ready    (nice_longp_wbck_ready), \n    .nice_longp_wbck_i_wdat     (nice_rsp_multicyc_dat),\n    .nice_longp_wbck_i_err      (nice_rsp_multicyc_err),\n    .nice_longp_wbck_i_itag     (nice_o_itag),\n  `endif//}\n\n    .clk                 (clk          ),\n    .rst_n               (rst_n        ) \n  );\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:assign:000001",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "881-881"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:assign:000002",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "882-882"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:assign:000003",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "883-883"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:assign:000004",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "884-884"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:assign:000005",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "956-956"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000001",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "211-226"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000002",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "253-299"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000003",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "347-415"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000004",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "427-463"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000005",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "521-646"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000006",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "666-712"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000007",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "717-738"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000008",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "769-875"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:inst:000009",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "889-954"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "104-106"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "166-173"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "175-192"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "246-249"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "271-275"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "515-519"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "524-531"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "542-544"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000009",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "625-642"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000010",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "702-708"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000011",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "869-871"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:pp_blk:000012",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "891-893"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "881-884"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "203-208"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "228-249"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "303-345"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000004",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "419-424"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000005",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "467-519"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000006",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "650-664"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:internal_signal:000007",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "742-765"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_exu/e203_exu.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_exu/e203_exu.v",
+      "lines": "30-197"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_exu/e203_exu.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "3/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

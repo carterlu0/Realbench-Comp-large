@@ -1,0 +1,408 @@
+{
+  "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_cpu/e203_cpu__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "group",
+      "type": "bus_cluster",
+      "question_type": "bus_cluster",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:bus_cluster:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "span_lines": "859-862",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign inspect_mem_cmd_valid = mem_icb_cmd_valid;\n  assign inspect_mem_cmd_ready = mem_icb_cmd_ready;\n  assign inspect_mem_rsp_valid = mem_icb_rsp_valid;\n  assign inspect_mem_rsp_ready = mem_icb_rsp_ready;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "858-858"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000002",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "859-859"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000003",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "860-860"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000004",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "861-861"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000005",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "862-862"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000006",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "863-863"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:assign:000007",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "864-864"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "320-337"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000002",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "341-372"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000003",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "378-392"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000004",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "450-459"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000005",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "492-748"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000006",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "751-808"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:inst:000007",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "812-854"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "41-43"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "44-46"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "93-95"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "97-99"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "101-118"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "120-137"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "206-230"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "232-257"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000009",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "259-269"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000010",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "271-281"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000011",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "305-308"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000012",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "309-312"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000013",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "328-330"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000014",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "331-333"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000015",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "356-360"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000016",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "361-365"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000017",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "396-422"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000018",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "424-438"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000019",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "440-460"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000020",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "462-488"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000021",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "496-503"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000022",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "547-550"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000023",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "551-554"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000024",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "556-585"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000025",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "587-605"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000026",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "663-681"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000027",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "683-702"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000028",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "705-739"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000029",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "791-803"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000030",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "750-809"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000031",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "837-849"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:pp_blk:000032",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "811-855"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "858-864"
+    },
+    {
+      "kind": "group",
+      "type": "bus_cluster",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:bus_cluster:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "859-862"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "859-862"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "289-316"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "374-376"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "397-446"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:param_decl:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "31-31"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_cpu/e203_cpu.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_cpu/e203_cpu.v",
+      "lines": "33-286"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_cpu/e203_cpu.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 1,
+  "variant_id": "1/1",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

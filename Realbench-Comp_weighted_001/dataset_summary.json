@@ -1,0 +1,82 @@
+{
+  "dataset_id": "Realbench-Comp_weighted_001",
+  "dataset_dir": "Realbench-Comp_weighted_001",
+  "sample_count": 200,
+  "total_questions": 200,
+  "type_counts": {
+    "always": 33,
+    "assign": 40,
+    "assign_cluster": 24,
+    "begin_end": 19,
+    "bus_cluster": 11,
+    "case": 5,
+    "counter_cluster": 1,
+    "fsm": 4,
+    "function": 5,
+    "generate": 3,
+    "handshake": 19,
+    "instantiation": 35,
+    "reg_cluster": 1
+  },
+  "question_type_counts": {
+    "always": 5,
+    "assign": 40,
+    "assign_cluster": 24,
+    "begin_end": 19,
+    "bus_cluster": 11,
+    "case": 5,
+    "counter_cluster": 1,
+    "counter_cluster_block": 12,
+    "fsm": 4,
+    "fsm_block": 14,
+    "function": 5,
+    "generate": 3,
+    "handshake": 19,
+    "handshake_block": 2,
+    "instantiation": 35,
+    "reg_cluster": 1
+  },
+  "grouping_key": "source_group",
+  "group_question_type_counts": {
+    "aes": {
+      "always": 1,
+      "case": 2,
+      "counter_cluster_block": 8,
+      "function": 5,
+      "instantiation": 3,
+      "reg_cluster": 1
+    },
+    "e203_hbirdv2": {
+      "always": 1,
+      "assign": 36,
+      "assign_cluster": 22,
+      "begin_end": 1,
+      "bus_cluster": 11,
+      "generate": 2,
+      "handshake": 19,
+      "instantiation": 28
+    },
+    "sdc": {
+      "always": 3,
+      "assign": 4,
+      "assign_cluster": 2,
+      "begin_end": 18,
+      "case": 3,
+      "counter_cluster": 1,
+      "counter_cluster_block": 4,
+      "fsm": 4,
+      "fsm_block": 14,
+      "generate": 1,
+      "handshake_block": 2,
+      "instantiation": 4
+    }
+  },
+  "attached_files": {
+    "all_samples_manifest_json": "Realbench-Comp_weighted_001/all_samples_manifest.json",
+    "excluded_forever_json": "Realbench-Comp_weighted_001/excluded_forever.json",
+    "dataset_manifest_json": "Realbench-Comp_weighted_001/dataset_manifest.json",
+    "dataset_manifest_md": "Realbench-Comp_weighted_001/dataset_manifest.md"
+  }
+}
+
+

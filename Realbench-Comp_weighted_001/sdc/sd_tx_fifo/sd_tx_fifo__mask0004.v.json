@@ -1,0 +1,141 @@
+{
+  "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+  "variant_index": 4,
+  "output_file": "sdc/sd_tx_fifo/sd_tx_fifo__mask0004.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000006",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "span_lines": "66-69",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "   assign empty = (adr_i == adr_o) ;\n   \n   assign mem_empt = ( adr_i-adr_o);\n   assign q = ram[adr_o[`FIFO_TX_MEM_ADR_SIZE-2:0]];\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:proc:000001",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "27-29"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:proc:000002",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "31-41"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:proc:000003",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "44-56"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000001",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "24-24"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000002",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "25-25"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000003",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "65-65"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000004",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "66-66"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000005",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "68-68"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:assign:000006",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "69-69"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:begin_end:000001",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "36-39"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:begin_end:000002",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "50-53"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:begin_end:000003",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "48-56"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:grp:assign_cluster:000001",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "24-25"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:grp:assign_cluster:000002",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "65-69"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:grp:internal_signal:000001",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "17-20"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_tx_fifo/sd_tx_fifo.v:grp:port_section:000001",
+      "file": "sdc/sd_tx_fifo/sd_tx_fifo.v",
+      "lines": "5-14"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_tx_fifo/sd_tx_fifo.md"
+  ],
+  "variants_for_source_file": 5,
+  "variant_id": "4/5",
+  "effective_max_variants_per_file": 5,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

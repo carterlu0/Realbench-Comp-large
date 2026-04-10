@@ -1,0 +1,267 @@
+{
+  "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_controller_wb/sd_controller_wb__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "case",
+      "question_type": "case",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:case:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "span_lines": "315-353",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "        case (wb_adr_i)\n          `argument:\n            wb_dat_o  <=   argument_reg ;\n          `command :\n            wb_dat_o <=  cmd_setting_reg ;\n          `status :\n            wb_dat_o <=  status_reg ;\n          `resp1 :\n            wb_dat_o <=  cmd_resp_1 ;\n\n          `controller :\n            wb_dat_o <=  controll_setting_reg ;\n          `block :\n            wb_dat_o <=  block_size_reg ;\n          `power :\n            wb_dat_o <=  power_controll_reg ;\n          `software :\n            wb_dat_o  <=  software_reset_reg ;\n          `timeout :\n            wb_dat_o  <=  time_out_reg ;\n          `normal_isr :\n            wb_dat_o <=  normal_int_status_reg ;\n          `error_isr :\n            wb_dat_o  <=  error_int_status_reg ;\n          `normal_iser :\n            wb_dat_o <=  normal_int_signal_enable_reg ;\n          `error_iser :\n            wb_dat_o  <=  error_int_signal_enable_reg ;\n          `clock_d :\n            wb_dat_o  <= clock_divider;\n          `capa  :\n            wb_dat_o  <=  capabilies_reg ;\n          `bd_status :\n            wb_dat_o  <=  Bd_Status_reg;\n          `bd_isr :\n            wb_dat_o  <=  Bd_isr_reg ;\n          `bd_iser :\n            wb_dat_o  <=  Bd_isr_enable_reg ;\n        endcase\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:proc:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "149-309"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:proc:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "311-355"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "158-178"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "189-192"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000003",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "194-197"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000004",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "228-232"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000005",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "219-234"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000006",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "245-249"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000007",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "236-250"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000008",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "265-269"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000009",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "254-271"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000010",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "284-288"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000011",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "273-289"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000012",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "186-293"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000013",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "181-295"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000014",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "297-303"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000015",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "179-307"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000016",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "150-309"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000017",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "314-354"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:begin_end:000018",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "312-355"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:case:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "187-292"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:case:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "315-353"
+    },
+    {
+      "kind": "block",
+      "type": "pp_else_branch",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000002:br:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "115-116"
+    },
+    {
+      "kind": "block",
+      "type": "pp_elsif_branch",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000001:br:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "104-105"
+    },
+    {
+      "kind": "block",
+      "type": "pp_elsif_branch",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000001:br:000003",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "106-107"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "101-108"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000002",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "112-117"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000003",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "216-251"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000004",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "252-290"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000001:br:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "101-103"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:pp_blk:000002:br:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "112-114"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:grp:internal_signal:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "146-146"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:grp:param_decl:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "74-119"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_controller_wb/sd_controller_wb.v:grp:port_section:000001",
+      "file": "sdc/sd_controller_wb/sd_controller_wb.v",
+      "lines": "3-36"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_controller_wb/sd_controller_wb.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "1/3",
+  "effective_max_variants_per_file": 6,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

@@ -1,0 +1,85 @@
+{
+  "file": "aes/aes_rcon/aes_rcon.v",
+  "variant_index": 3,
+  "output_file": "aes/aes_rcon/aes_rcon__mask0003.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "always",
+      "question_type": "counter_cluster_block",
+      "id": "aes/aes_rcon/aes_rcon.v:proc:000002",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "span_lines": "72-74",
+      "region": "body_to_tail",
+      "parent_group_type": "counter_cluster",
+      "parent_group_id": "aes/aes_rcon/aes_rcon.v:grp:counter_cluster:000002",
+      "answer": "\tif(kld)\t\trcnt <=  4'h0;\n\telse\t\trcnt <=  rcnt_next;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_rcon/aes_rcon.v:proc:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "67-69"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_rcon/aes_rcon.v:proc:000002",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "72-74"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_rcon/aes_rcon.v:assign:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "71-71"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "aes/aes_rcon/aes_rcon.v:case:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "78-90"
+    },
+    {
+      "kind": "block",
+      "type": "function",
+      "id": "aes/aes_rcon/aes_rcon.v:function:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "76-91"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "aes/aes_rcon/aes_rcon.v:grp:counter_cluster:000002",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "67-74"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "aes/aes_rcon/aes_rcon.v:grp:internal_signal:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "63-65"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "aes/aes_rcon/aes_rcon.v:grp:port_section:000001",
+      "file": "aes/aes_rcon/aes_rcon.v",
+      "lines": "60-62"
+    }
+  ],
+  "related_docs": [
+    "aes/aes_rcon/aes_rcon.md"
+  ],
+  "variants_for_source_file": 5,
+  "variant_id": "3/5",
+  "effective_max_variants_per_file": 5,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

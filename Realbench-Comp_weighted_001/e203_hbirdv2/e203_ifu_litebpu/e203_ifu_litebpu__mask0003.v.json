@@ -1,0 +1,93 @@
+{
+  "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+  "variant_index": 3,
+  "output_file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu__mask0003.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:assign:000003",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "span_lines": "104-108",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  sirv_gnrl_dfflr #(1) rs1xn_rdrf_dfflrs(rs1xn_rdrf_ena, rs1xn_rdrf_nxt, rs1xn_rdrf_r, clk, rst_n);\n\n  assign bpu2rf_rs1_ena = rs1xn_rdrf_set;\n\n  assign bpu_wait = jalr_rs1x1_dep | jalr_rs1xn_dep | rs1xn_rdrf_set;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:assign:000001",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "85-85"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:assign:000002",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "106-106"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:assign:000003",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "108-108"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:assign:000004",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "110-113"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:assign:000005",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "115-115"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:inst:000001",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "104-104"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "106-115"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "87-102"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.v",
+      "lines": "29-61"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_ifu_litebpu/e203_ifu_litebpu.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "3/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

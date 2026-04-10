@@ -1,0 +1,205 @@
+{
+  "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "question_type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000003",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "span_lines": "68-77",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "     begin:rst_sync_PROC\n       if(rst_n == 1'b0)\n         begin\n           rst_sync_r[RST_SYNC_LEVEL-1:0] <= {RST_SYNC_LEVEL{1'b0}};\n         end\n       else\n         begin\n           rst_sync_r[RST_SYNC_LEVEL-1:0] <= {rst_sync_r[RST_SYNC_LEVEL-2:0],1'b1};\n         end\n     end\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:proc:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "67-77"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:proc:000002",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "85-88"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:assign:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "79-79"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:assign:000002",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "89-89"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:assign:000003",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "94-94"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:assign:000004",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "98-98"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:assign:000005",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "101-101"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:assign:000006",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "105-105"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "70-72"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000002",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "74-76"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000003",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "68-77"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000004",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "64-82"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000005",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "86-88"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:begin_end:000006",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "83-90"
+    },
+    {
+      "kind": "block",
+      "type": "generate",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:generate:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "63-91"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "41-43"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "44-46"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "97-99"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "100-102"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifndef_block",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "56-58"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "53-56"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "60-60"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:grp:param_decl:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "30-30"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:grp:param_decl:000002",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "57-58"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.v",
+      "lines": "32-50"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_reset_ctrl/e203_reset_ctrl.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 4,
+  "variant_id": "1/4",
+  "effective_max_variants_per_file": 4,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

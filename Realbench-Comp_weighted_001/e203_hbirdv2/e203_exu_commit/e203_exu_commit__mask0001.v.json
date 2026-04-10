@@ -1,0 +1,240 @@
+{
+  "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:inst:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "span_lines": "211-300",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  e203_exu_excp u_e203_exu_excp(\n    .commit_trap           (commit_trap     ),\n    .core_wfi              (core_wfi        ),\n    .wfi_halt_ifu_req      (wfi_halt_ifu_req),\n    .wfi_halt_exu_req      (wfi_halt_exu_req),\n    .wfi_halt_ifu_ack      (wfi_halt_ifu_ack),\n    .wfi_halt_exu_ack      (wfi_halt_exu_ack),\n\n    .cmt_badaddr           (cmt_badaddr    ), \n    .cmt_badaddr_ena       (cmt_badaddr_ena),\n    .cmt_epc               (cmt_epc        ),\n    .cmt_epc_ena           (cmt_epc_ena    ),\n    .cmt_cause             (cmt_cause      ),\n    .cmt_cause_ena         (cmt_cause_ena  ),\n    .cmt_status_ena        (cmt_status_ena ),\n                           \n    .cmt_dpc               (cmt_dpc        ),\n    .cmt_dpc_ena           (cmt_dpc_ena    ),\n    .cmt_dcause            (cmt_dcause     ),\n    .cmt_dcause_ena        (cmt_dcause_ena ),\n\n    .cmt_dret_ena          (cmt_dret_ena   ),\n    .cmt_ena               (cmt_ena        ),\n\n    .alu_excp_i_valid      (alu_cmt_i_valid  ),\n    .alu_excp_i_ready      (alu_excp_cmt_i_ready    ),\n    .alu_excp_i_misalgn    (alu_cmt_i_misalgn),\n    .alu_excp_i_ld         (alu_cmt_i_ld     ),\n    .alu_excp_i_stamo      (alu_cmt_i_stamo  ),\n    .alu_excp_i_buserr     (alu_cmt_i_buserr ),\n    .alu_excp_i_pc         (alu_cmt_i_pc     ),\n    .alu_excp_i_instr      (alu_cmt_i_instr  ),\n    .alu_excp_i_pc_vld     (alu_cmt_i_pc_vld ),\n    .alu_excp_i_badaddr    (alu_cmt_i_badaddr ),\n    .alu_excp_i_ecall      (alu_cmt_i_ecall   ),\n    .alu_excp_i_ebreak     (alu_cmt_i_ebreak  ),\n    .alu_excp_i_wfi        (alu_cmt_i_wfi  ),\n    .alu_excp_i_ifu_misalgn(alu_cmt_i_ifu_misalgn),\n    .alu_excp_i_ifu_buserr (alu_cmt_i_ifu_buserr ),\n    .alu_excp_i_ifu_ilegl  (alu_cmt_i_ifu_ilegl  ),\n                         \n    .longp_excp_i_ready    (longp_excp_i_ready  ),\n    .longp_excp_i_valid    (longp_excp_i_valid  ),\n    .longp_excp_i_ld       (longp_excp_i_ld     ),\n    .longp_excp_i_st       (longp_excp_i_st     ),\n    .longp_excp_i_buserr   (longp_excp_i_buserr ),\n    .longp_excp_i_badaddr  (longp_excp_i_badaddr),\n    .longp_excp_i_insterr  (longp_excp_i_insterr),\n    .longp_excp_i_pc       (longp_excp_i_pc     ),\n\n    .csr_mtvec_r           (csr_mtvec_r       ),\n\n    .dbg_irq_r             (dbg_irq_r),\n    .lcl_irq_r             (lcl_irq_r),\n    .ext_irq_r             (ext_irq_r),\n    .sft_irq_r             (sft_irq_r),\n    .tmr_irq_r             (tmr_irq_r),\n\n    .status_mie_r          (status_mie_r),\n    .mtie_r                (mtie_r      ),\n    .msie_r                (msie_r      ),\n    .meie_r                (meie_r      ),\n\n\n    .dbg_mode              (dbg_mode),\n    .dbg_halt_r            (dbg_halt_r),\n    .dbg_step_r            (dbg_step_r),\n    .dbg_ebreakm_r         (dbg_ebreakm_r),\n    .oitf_empty            (oitf_empty),\n\n    .u_mode                (u_mode),\n    .s_mode                (s_mode),\n    .h_mode                (h_mode),\n    .m_mode                (m_mode),\n\n    .excpirq_flush_ack        (excpirq_flush_ack       ),\n    .excpirq_flush_req        (excpirq_flush_req       ),\n    .nonalu_excpirq_flush_req_raw (nonalu_excpirq_flush_req_raw ),\n    .excpirq_flush_add_op1    (excpirq_flush_add_op1),  \n    .excpirq_flush_add_op2    (excpirq_flush_add_op2),  \n  `ifdef E203_TIMING_BOOST//}\n    .excpirq_flush_pc         (excpirq_flush_pc),\n  `endif//}\n\n    .excp_active (excp_active),\n    .amo_wait (amo_wait),\n\n    .clk   (clk  ),\n    .rst_n (rst_n)\n  );\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "304-304"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "305-305"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000003",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "307-307"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000004",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "309-309"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000005",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "311-311"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000006",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "312-312"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000007",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "314-314"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000008",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "317-317"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000009",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "318-318"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000010",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "321-321"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000011",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "324-324"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000012",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "325-325"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:assign:000013",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "327-327"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:inst:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "165-196"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:inst:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "211-300"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "143-145"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "156-158"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "190-192"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "202-204"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "291-293"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "313-315"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifndef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "330-335"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifndef_block",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "329-336"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "304-312"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:assign_cluster:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "317-327"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "304-312"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:handshake:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "317-325"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "152-163"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "198-208"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_exu_commit/e203_exu_commit.v",
+      "lines": "32-148"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_exu_commit/e203_exu_commit.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "1/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

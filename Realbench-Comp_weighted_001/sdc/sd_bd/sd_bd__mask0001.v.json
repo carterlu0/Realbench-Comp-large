@@ -1,0 +1,372 @@
+{
+  "file": "sdc/sd_bd/sd_bd.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_bd/sd_bd__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "always",
+      "question_type": "counter_cluster_block",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000004",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "span_lines": "120-148",
+      "region": "body_to_tail",
+      "parent_group_type": "counter_cluster",
+      "parent_group_id": "sdc/sd_bd/sd_bd.v:grp:counter_cluster:000002",
+      "answer": "begin\n   new_bw <=0;  \n  \n  if (rst) begin\n    m_wr_pnt<=0;\n    \n    write_cnt<=0;\n    new_bw <=0; \n    read_cnt<=0;\n   \n  end\n  else if (we_m) begin    \n    if (free_bd >0) begin\n      write_cnt <=write_cnt+1;\n      m_wr_pnt<=m_wr_pnt+1;\n      if (!write_cnt[1]) begin      //First write indicate source buffer addr (2x16)\n        bd_mem[m_wr_pnt]<=dat_in_m;             \n      end\n      else begin        //Second write indicate SD card block addr (2x16)\n        bd_mem[m_wr_pnt]<=dat_in_m;\n        new_bw <=write_cnt[0];      //Second 16 bytes writen, complete BD\n      end\n     end\n  end   \n   \n    \n\nend\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "39-68"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "72-85"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000003",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "89-102"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000004",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "120-148"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000005",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "150-167"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_bd/sd_bd.v:proc:000006",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "171-192"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "43-50"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "55-57"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000003",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "58-61"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000004",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "52-62"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000005",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "51-63"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000006",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "40-68"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000007",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "74-76"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000008",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "77-79"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000009",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "80-83"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000010",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "73-85"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000011",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "92-95"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000012",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "96-101"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000013",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "90-102"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000014",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "124-131"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000015",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "136-138"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000016",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "139-142"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000017",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "133-143"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000018",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "132-144"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000019",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "121-148"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000020",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "152-155"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000021",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "156-158"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000022",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "159-164"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000023",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "151-167"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000024",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "174-178"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000025",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "179-189"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_bd/sd_bd.v:begin_end:000026",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "172-192"
+    },
+    {
+      "kind": "block",
+      "type": "pp_else_branch",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000001:br:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "28-29"
+    },
+    {
+      "kind": "block",
+      "type": "pp_else_branch",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000002:br:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "107-108"
+    },
+    {
+      "kind": "block",
+      "type": "pp_else_branch",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000003:br:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "104-193"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "26-30"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "105-109"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000003",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "25-194"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000001:br:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "26-27"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000002:br:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "105-106"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_bd/sd_bd.v:pp_blk:000003:br:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "25-103"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_bd/sd_bd.v:grp:counter_cluster:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "39-68"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_bd/sd_bd.v:grp:counter_cluster:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "120-148"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_bd/sd_bd.v:grp:counter_cluster:000003",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "171-192"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_bd/sd_bd.v:grp:internal_signal:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "22-36"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_bd/sd_bd.v:grp:internal_signal:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "106-117"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_bd/sd_bd.v:grp:port_section:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "7-19"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_bd/sd_bd.v:grp:reg_cluster:000001",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "39-102"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_bd/sd_bd.v:grp:reg_cluster:000002",
+      "file": "sdc/sd_bd/sd_bd.v",
+      "lines": "120-192"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_bd/sd_bd.md"
+  ],
+  "variants_for_source_file": 5,
+  "variant_id": "1/5",
+  "effective_max_variants_per_file": 5,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

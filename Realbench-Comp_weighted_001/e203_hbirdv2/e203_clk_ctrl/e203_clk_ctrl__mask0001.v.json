@@ -1,0 +1,191 @@
+{
+  "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:assign:000002",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "span_lines": "137-139",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  sirv_gnrl_dffr #(1)dtcm_active_dffr(dtcm_active, dtcm_active_r, clk, rst_n);\n  wire dtcm_clk_en = core_cgstop | dtcm_active | dtcm_active_r;\n  assign dtcm_ls = ~dtcm_clk_en;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:assign:000001",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "125-125"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:assign:000002",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "139-139"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:assign:000003",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "151-151"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000001",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "89-94"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000002",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "96-101"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000003",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "103-108"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000004",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "110-115"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000005",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "123-123"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000006",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "127-132"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000007",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "137-137"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:inst:000008",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "141-146"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "49-52"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "53-56"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "64-66"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "67-69"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "117-133"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "135-147"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "77-84"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "122-122"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "124-124"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:grp:internal_signal:000004",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "136-136"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:grp:internal_signal:000005",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "138-138"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.v",
+      "lines": "31-71"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_clk_ctrl/e203_clk_ctrl.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "1/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

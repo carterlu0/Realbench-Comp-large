@@ -1,0 +1,820 @@
+{
+  "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "group",
+      "type": "fsm",
+      "question_type": "fsm",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:fsm:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "span_lines": "115-572",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "always @ (state or Delay_Cnt or Write_Read or Cmd_Cnt or Write_Only or Ack_internal_in or  cmd_dat_i or Response_Size or Delay_Cycler)\nbegin : FSM_COMBO\n next_state  = 0;   \ncase(state)  \nINIT: begin\n  if (Cmd_Cnt >= `INIT_DELAY )begin\n     next_state = IDLE;\n  end\n \n  else begin\n     \n      next_state = INIT;\n  end\n  \nend\n\n                                                \nIDLE: begin        \n\t if (Write_Read ) begin \n        next_state = WRITE_WR;\n      end   \n      else if (Write_Only  ) begin\n        next_state = WRITE_WO;\n      end\n      else begin\n         next_state = IDLE;\n      end\nend\nWRITE_WR: \n      if (Cmd_Cnt >=SEND_SIZE-1) begin\n        next_state = DLY_WR;\n      end      \n      else begin\n        next_state = WRITE_WR; \n      end \nWRITE_WO: \n      if (Cmd_Cnt >= SEND_SIZE-1) begin\n        next_state = DLY_WO;\n      end      \n      else begin\n        next_state = WRITE_WO; \n      end \t  \nDLY_WR : \n      if ( (Delay_Cnt >= `NCR) && ( !cmd_dat_i)) begin\n        next_state = READ_WR;\n      end      \n      else begin\n        next_state = DLY_WR; \n      end \t  \nDLY_WO :\n       if (Delay_Cnt >= Delay_Cycler) begin\n        next_state = ACK_WO;\n      end      \n      else begin\n        next_state = DLY_WO; \n      end \nREAD_WR : \n      if (Cmd_Cnt >= (Response_Size+EIGHT_PAD)) begin\n        next_state = DLY_READ;\n      end      \n      else begin\n        next_state = READ_WR; \n      end \n\t\t\nACK_WO : \n      next_state = IDLE; \n             \nDLY_READ :\n     if (Ack_internal_in ) begin\n        next_state = ACK_WR;\n      end      \n      else begin\n        next_state = DLY_READ; \n      end \t  \n      \nACK_WR  :\n        next_state = IDLE; \n\n\ndefault : next_state  = INIT;\n \n endcase     \nend \n  //----\n    \t \nalways @ (posedge SD_CLK_IN or posedge RST_IN)\nbegin : REQ_SYNC\n\tif  (RST_IN ) begin\n\t\tReq_internal_in <=1'b0;\n\t\tq <=1'b0;\n\tend\n\telse begin  \n\t\tq<=REQ_IN;\n\t\tReq_internal_in<=q;\n\tend\n\n\nend\n\nalways @ (posedge SD_CLK_IN or posedge RST_IN)\nbegin :ACK_SYNC\n\tif  (RST_IN ) begin\n\t\tAck_internal_in <=1'b0;\n\t\tq1 <=1'b0;\n\tend\n\telse begin  \n\t\tq1<=ACK_IN;\n\t\tAck_internal_in<=q1;\n\tend\n\n\nend\n\n\n\n\n\n\t\t \n\t\t \nalways @ (posedge SD_CLK_IN or posedge RST_IN )\n  begin:COMMAND_DECODER\n  if (RST_IN ) begin\n\t\t  Delay_Cycler <=3'b0;\n\t\t  Response_Size <=7'b0; \n\t\t  DECODER_ACK <= 1;\n\t\t  Write_Read<=1'b0;\n\t    Write_Only<=1'b0;\n\t    CRC_Check_On <=0;\n\t    In_Buff <=0;\n\t    block_write<=0;\n\t    block_read <=0;\n\t    word_select<=0;\n   end\n   else begin\n\t\t\tif (Req_internal_in == 1) begin\n\t\t\t\tResponse_Size[6:0] <=  SETTING_IN [6:0];\n\t\t\t\tCRC_Check_On <= SETTING_IN [7];\n\t\t\t\tDelay_Cycler[2:0] <= SETTING_IN [10:8];\n\t\t\t\tblock_write <= SETTING_IN [11];\n\t\t\t\tblock_read <= SETTING_IN [12];\n\t\t\t\tword_select <=SETTING_IN [14:13];\n\t\t\t\tIn_Buff <= CMD_IN;\n\t\t\t\tDECODER_ACK<=0;\t\n\t\t\t\tif (SETTING_IN [6:0]>0) begin\n\t\t\t\t   Write_Read<=1'b1;\n\t\t\t\t   Write_Only<=1'b0;\n\t\t\t\tend\n\t\t\t\telse begin\n\t\t\t\t\tWrite_Read<=1'b0;\n\t\t\t\t  Write_Only<=1'b1;\n\t\t\t\tend\n\t\t\tend\n\t\t\telse begin\n\t\t\t\tWrite_Read<=1'b0;\n\t\t\t\tWrite_Only<=1'b0;\n\t\t\t\tDECODER_ACK <= 1;\t\t\t\n\t\t\tend\t\n    end\n end\n//End block COMMAND_DECODER  \n\n//-------Function for Combo logic-----------------\n\n\n\nassign ACK_OUT = FSM_ACK & DECODER_ACK;\n\n//----------------Seq logic------------\nalways @ (posedge SD_CLK_IN or posedge RST_IN   )\nbegin : FSM_SEQ\n  if (RST_IN ) begin\n    state <= #1 INIT;\n end \n\n else begin\n    state <= #1 next_state;\n end\nend\n\n//-------------OUTPUT_LOGIC-------\nalways @ (posedge SD_CLK_IN or posedge RST_IN   )\nbegin : FSM_OUT\n if (RST_IN ) begin    \n\t    CRC_Enable=0;\n\t    word_select_counter<=0;\n\t    Delay_Cnt =0;\n\t   \tcmd_oe_o=1; \t\t\n\t    cmd_out_o = 1;  \n\t  \t Out_Buff =0;\n\t   \tFSM_ACK=1;\n\t\tREQ_OUT =0;\n\t\t  CRC_RST =1;\n\t\t  CRC_OUT =0;\n\t\t  CRC_IN =0;\n\t\t  CMD_OUT =0;\t\n\t   \tCrc_Buffering =0; \n\t   \tSTATUS = 0;\n\t   \tCRC_Valid=0;\n\t   \tCmd_Cnt=0;\n\t   \tst_dat_t<=0;\n\t   \n   \t\n end \n else begin\n  case(state)\n\tINIT : begin\n\t\tCmd_Cnt=Cmd_Cnt+1;\n\t\tcmd_oe_o=1; \t\t\n\t\tcmd_out_o = 1;  \n\tend\n    \n\tIDLE : begin\n\t\tcmd_oe_o=0;      //Put CMD to Z  \n\t\tDelay_Cnt =0;\n\t\tCmd_Cnt =0;\n\t\tCRC_RST =1;\n\t\tCRC_Enable=0; \n\t\tCMD_OUT=0;\n\t\tst_dat_t<=0;\n\t\tword_select_counter<=0;\t\t   \n\tend  \n\t\n\tWRITE_WR:   begin \n\t   FSM_ACK=0;\n       CRC_RST =0;\n\t   CRC_Enable=1;  \n     \n   \n    \n     if (Cmd_Cnt==0) begin\n       STATUS = 16'b0000_0000_0000_0001;\n       REQ_OUT=1;\n     end \n     else if (Ack_internal_in) begin\n       REQ_OUT=0;\n     end \n         \n        //Wait one cycle before sending, for setting up the CRC unit.\n     if (Crc_Buffering==1)  begin\n        cmd_oe_o =1;\n        if (`Bit_Nr > 8 ) begin  // 1->40 CMD, (41 >= CNT && CNT <=47) CRC, 48 stop_bit\n\t\t\t\t   cmd_out_o = In_Buff[`Vector_Index]; \n\t\t\t\t   if (`Bit_Nr > 9 ) begin //1 step ahead\n\t\t\t       CRC_OUT = In_Buff[`Vector_Index-1];\n\t\t\t     end else begin\n\t\t\t       CRC_Enable=0;  \n\t\t\t\t   end    \n\t\t\t  end\n\t\t\t  else if ( (`Bit_Nr <=8) && (`Bit_Nr >=2) ) begin\t\t\t \t\n\t\t\t\t  CRC_Enable=0; \n\t\t\t\t  cmd_out_o = CRC_VAL[(`Bit_Nr)-2];\t\n\t\t\t\t  \n\t\t    \t  if (block_read & block_write)\n\t\t    \t    st_dat_t<=2'b11;\n\t\t    \t  else  if  (block_read)\n\t\t    \t    st_dat_t<=2'b10;    \t\t\t\t\n\t\t\t  end\n\t\t\t  else begin        \n\t\t\t\t  cmd_out_o =1'b1;\n\t\t\t  end\t\t\n\t\t\t  Cmd_Cnt = Cmd_Cnt+1 ;\n\t\tend\t\t\n\t  else begin //Pre load CRC\n\t\t    Crc_Buffering=1;\n\t   \t  CRC_OUT = In_Buff[`Vector_Index];\n\t  end\t  \n \tend \t\n\n\tWRITE_WO:  begin \n\t   FSM_ACK=0;\n     CRC_RST =0;\n\t   CRC_Enable=1;  \n         \n    \n     if (Cmd_Cnt==0) begin\n       STATUS[3:0] = 16'b0000_0000_0000_0010;\n       REQ_OUT=1;\n     end \n     else if (Ack_internal_in) begin\n       REQ_OUT=0;\n     end \n       \n    \n        \n        //Wait one cycle before sending, for setting up the CRC unit.\n     if (Crc_Buffering==1)  begin\n        cmd_oe_o =1;  \n        if (`Bit_Nr > 8 ) begin  // 1->40 CMD, (41 >= CNT && CNT <=47) CRC, 48 stop_bit\n\t\t\t     cmd_out_o = In_Buff[`Vector_Index]; \n\t\t\t     if (`Bit_Nr > 9 ) begin //1 step ahead\n\t\t\t        CRC_OUT = In_Buff[`Vector_Index-1];\n\t\t\t     end \n           else begin\n\t\t\t        CRC_Enable=0;  \n\t\t\t     end    \n\t\t    end\n\t\t    else if( (`Bit_Nr <=8) && (`Bit_Nr >=2) ) begin\t\t\t \t\n\t\t\t     CRC_Enable=0; \n\t\t       cmd_out_o = CRC_VAL[(`Bit_Nr)-2];\t\n\t\t       if  (block_read)\n\t\t    \t    st_dat_t<=2'b10;\t\t\t\n\t\t    end\t\t \n\t  \t   else begin        \n\t\t  \t    cmd_out_o =1'b1;\n\t\t    end\t\t\n\t\t\t  Cmd_Cnt = Cmd_Cnt+1;\t\n\t\tend\t\t\n\t\telse begin //Pre load CRC\n\t\t   Crc_Buffering=1;\n\t   \t CRC_OUT = In_Buff[`Vector_Index];\n\t  end\t  \n \tend \t\n\t\n\tDLY_WR :  begin \n\t   if (Delay_Cnt==0) begin\n         STATUS[3:0] = 4'b0011;\n         REQ_OUT=1;\n      end  \n      else if (Ack_internal_in) begin\n       REQ_OUT=0;\n     end      \n\t\t  CRC_Enable=0;\n\t\t  CRC_RST =1;\n\t\t  Cmd_Cnt = 1; \n\t\t  cmd_oe_o=0; \t\n\t\t  if (Delay_Cnt<3'b111)\n\t\t    Delay_Cnt =Delay_Cnt+1;  \n\t\t  Crc_Buffering=0;\n    end\n\t\n    DLY_WO :  begin  \n      if (Delay_Cnt==0) begin\n         STATUS[3:0] = 4'b0100;\n         STATUS[5] = 0;\n         STATUS[6] = 1;\n         REQ_OUT=1;\n      end  \n      else if (Ack_internal_in) begin\n       REQ_OUT=0;\n     end   \n\t\t  CRC_Enable=0;\n\t\t  CRC_RST =1;\n\t\t  Cmd_Cnt = 0; \n\t\t  cmd_oe_o=0;\n\t    Delay_Cnt =Delay_Cnt+1;  \n\t    Crc_Buffering=0;     \n    end\t\n    \n    READ_WR :  begin\n      Delay_Cnt =0;\n      CRC_RST =0;\n\t    CRC_Enable=1;        \n      cmd_oe_o =0;\n      \n\t   if (Cmd_Cnt==1) begin\n       STATUS[3:0] = 16'b0000_0000_0000_0101;\n       REQ_OUT=1;\n       Out_Buff[39]=0; //startbit (0)\n     end \n     else if (Ack_internal_in) begin\n       REQ_OUT=0;\n     end  \n\t     \n\t     \n\t     \n      if (Cmd_Cnt < (Response_Size))begin\n        \n        if (Cmd_Cnt<8 ) //1+1+6 (S,T,Index)          \n          Out_Buff[39-Cmd_Cnt] = cmd_dat_i; \n        else begin\n          \n          if (word_select == 2'b00) begin\n            if(Cmd_Cnt<40) begin\n\t\t          word_select_counter<= word_select_counter+1;\n\t\t          Out_Buff[31-word_select_counter] = cmd_dat_i;\n\t\t         end \n\t\t      end    \n          else if (word_select == 2'b01) begin\n            if ( (Cmd_Cnt>=40) && (Cmd_Cnt<72) )begin\n\t\t          word_select_counter<= word_select_counter+1;\n\t\t          Out_Buff[31-word_select_counter] = cmd_dat_i;\n\t\t         end \n\t\t      \n\t\t      end \n          else if  (word_select == 2'b10) begin\n           if ( (Cmd_Cnt>=72) && (Cmd_Cnt<104) )begin\n\t\t          word_select_counter<= word_select_counter+1;\n\t\t          Out_Buff[31-word_select_counter] = cmd_dat_i;\n\t\t         end \n\t\t      end\t     \n          else if  (word_select == 2'b11) begin\n           if ( (Cmd_Cnt>=104) && (Cmd_Cnt<128) )begin\n\t\t          word_select_counter<= word_select_counter+1;\n\t\t          Out_Buff[31-word_select_counter] = cmd_dat_i;\n\t\t         end \n\t\t      end\t  \n          \n          \n\t\t    end\n\t\t    CRC_OUT = cmd_dat_i;  \n\t\t        \n      end       \n      else if ( Cmd_Cnt - Response_Size <=6 ) begin\n\t\t\t  CRC_IN [(Response_Size+6)-(Cmd_Cnt)] = cmd_dat_i;\n\t\t\t  CRC_Enable=0;  \n      end\n      else begin\n\t\t\t   if ((CRC_IN != CRC_VAL) && ( CRC_Check_On == 1)) begin\n\t\t\t\t   CRC_Valid=0;\t\n\t\t\t\t   CRC_Enable=0;\t\t\t  \t\t\t\n\t\t    \tend  \n\t\t    \telse begin\n\t\t    \tCRC_Valid=1;\n\t\t    \tCRC_Enable=0;\n\t\t    \tend \n\t\t    \tif (block_read & block_write)\n\t\t    \t    st_dat_t<=2'b11;\n\t\t    \telse if (block_write)\n\t\t    \t  st_dat_t<=2'b01;\n\t\t    \t \n      end        \n       Cmd_Cnt = Cmd_Cnt+1;\n   end\n    \n   DLY_READ:  begin\n     \n     if (Delay_Cnt==0) begin\n       STATUS[3:0] = 4'b0110;\n       STATUS[5] = CRC_Valid;\n       STATUS[6] = 1;\n       REQ_OUT=1;\n     end \n     else if (Ack_internal_in) begin\n       REQ_OUT=0;\n     end  \n        \n\t\t  CRC_Enable=0;\n\t\t  CRC_RST =1;\n\t\t  Cmd_Cnt = 0; \t\t \n\t\t  cmd_oe_o=0; \n      \n      CMD_OUT[39:0]=Out_Buff;\n\t\t  Delay_Cnt =Delay_Cnt+1;       \n    end\t\n    \n\tACK_WO:  begin    \n\t\t  FSM_ACK=1;\n    end\t\n\t\n\tACK_WR:  begin    \n\t\t  FSM_ACK=1;\n\t\t  REQ_OUT =0;\t\n\t\t\n    end\t\n\t\n   endcase\n  end\nend\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:proc:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "115-197"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:proc:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "200-212"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:proc:000003",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "214-226"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:proc:000004",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "234-273"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:proc:000005",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "283-292"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:proc:000006",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "295-572"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:assign:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "280-280"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "120-122"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "124-127"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000003",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "119-129"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000004",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "133-135"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000005",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "136-138"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000006",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "139-141"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000007",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "132-142"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000008",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "144-146"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000009",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "147-149"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000010",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "151-153"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000011",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "154-156"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000012",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "158-160"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000013",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "161-163"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000014",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "165-167"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000015",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "168-170"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000016",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "172-174"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000017",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "175-177"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000018",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "183-185"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000019",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "186-188"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000020",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "116-197"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000021",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "202-205"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000022",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "206-209"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000023",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "201-212"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000024",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "216-219"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000025",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "220-223"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000026",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "215-226"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000027",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "236-247"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000028",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "258-261"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000029",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "262-265"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000030",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "249-266"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000031",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "267-271"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000032",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "248-272"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000033",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "235-273"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000034",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "285-287"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000035",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "289-291"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000036",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "284-292"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000037",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "297-317"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000038",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "320-324"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000039",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "326-335"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000040",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "344-347"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000041",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "348-350"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000042",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "357-359"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000043",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "359-361"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000044",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "355-362"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000045",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "363-371"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000046",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "372-374"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000047",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "353-376"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000048",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "377-380"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000049",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "337-381"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000050",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "389-392"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000051",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "393-395"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000052",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "404-406"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000053",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "407-409"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000054",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "402-410"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000055",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "411-416"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000056",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "417-419"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000057",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "400-421"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000058",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "422-425"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000059",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "383-426"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000060",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "429-432"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000061",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "433-435"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000062",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "428-443"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000063",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "446-451"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000064",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "452-454"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000065",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "445-461"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000066",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "469-473"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000067",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "474-476"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000068",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "487-490"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000069",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "486-491"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000070",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "493-496"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000071",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "492-498"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000072",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "500-503"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000073",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "499-504"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000074",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "506-509"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000075",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "505-510"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000076",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "484-513"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000077",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "480-516"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000078",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "517-520"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000079",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "522-525"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000080",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "526-529"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000081",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "521-535"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000082",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "463-537"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000083",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "541-546"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000084",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "547-549"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000085",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "539-558"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000086",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "560-562"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000087",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "564-568"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000088",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "318-571"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:begin_end:000089",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "296-572"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:case:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "118-196"
+    },
+    {
+      "kind": "block",
+      "type": "case",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:case:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "319-570"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:inst:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "108-113"
+    },
+    {
+      "kind": "block",
+      "type": "pp_else_branch",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:pp_blk:000001:br:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "41-42"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:pp_blk:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "39-43"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_branch",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:pp_blk:000001:br:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "39-40"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:counter_cluster:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "115-197"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:counter_cluster:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "295-572"
+    },
+    {
+      "kind": "group",
+      "type": "fsm",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:fsm:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "115-572"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:handshake:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "115-280"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:internal_signal:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "24-45"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:internal_signal:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "64-106"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:param_decl:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "60-61"
+    },
+    {
+      "kind": "group",
+      "type": "param_decl",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:param_decl:000003",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "90-91"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:port_section:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "5-22"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:reg_cluster:000001",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "200-273"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v:grp:reg_cluster:000002",
+      "file": "sdc/sd_cmd_serial_host/sd_cmd_serial_host.v",
+      "lines": "283-572"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_cmd_serial_host/sd_cmd_serial_host.md"
+  ],
+  "variants_for_source_file": 14,
+  "variant_id": "1/14",
+  "effective_max_variants_per_file": 14,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

@@ -1,0 +1,79 @@
+{
+  "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+  "variant_index": 2,
+  "output_file": "e203_hbirdv2/e203_clkgate/e203_clkgate__mask0002.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:assign:000002",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "span_lines": "48-48",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "assign clk_out = enb & clk_in;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:proc:000001",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "44-46"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:assign:000001",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "37-37"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:assign:000002",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "48-48"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "35-38"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifndef_block",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "40-50"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "42-42"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_clkgate/e203_clkgate.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_clkgate/e203_clkgate.v",
+      "lines": "29-32"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_clkgate/e203_clkgate.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 2,
+  "variant_id": "2/2",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

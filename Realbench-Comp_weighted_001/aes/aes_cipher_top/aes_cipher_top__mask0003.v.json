@@ -1,0 +1,771 @@
+{
+  "file": "aes/aes_cipher_top/aes_cipher_top.v",
+  "variant_index": 3,
+  "output_file": "aes/aes_cipher_top/aes_cipher_top__mask0003.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "question_type": "reg_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:reg_cluster:000003",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "span_lines": "148-163",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "always @(posedge clk) text_out[127:120] <=  sa00_sr ^ w0[31:24];\nalways @(posedge clk) text_out[095:088] <=  sa01_sr ^ w1[31:24];\nalways @(posedge clk) text_out[063:056] <=  sa02_sr ^ w2[31:24];\nalways @(posedge clk) text_out[031:024] <=  sa03_sr ^ w3[31:24];\nalways @(posedge clk) text_out[119:112] <=  sa10_sr ^ w0[23:16];\nalways @(posedge clk) text_out[087:080] <=  sa11_sr ^ w1[23:16];\nalways @(posedge clk) text_out[055:048] <=  sa12_sr ^ w2[23:16];\nalways @(posedge clk) text_out[023:016] <=  sa13_sr ^ w3[23:16];\nalways @(posedge clk) text_out[111:104] <=  sa20_sr ^ w0[15:08];\nalways @(posedge clk) text_out[079:072] <=  sa21_sr ^ w1[15:08];\nalways @(posedge clk) text_out[047:040] <=  sa22_sr ^ w2[15:08];\nalways @(posedge clk) text_out[015:008] <=  sa23_sr ^ w3[15:08];\nalways @(posedge clk) text_out[103:096] <=  sa30_sr ^ w0[07:00];\nalways @(posedge clk) text_out[071:064] <=  sa31_sr ^ w1[07:00];\nalways @(posedge clk) text_out[039:032] <=  sa32_sr ^ w2[07:00];\nalways @(posedge clk) text_out[007:000] <=  sa33_sr ^ w3[07:00];\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "50-55"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "59-59"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000003",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "60-60"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000004",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "61-61"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000005",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "69-69"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000006",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "71-71"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000007",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "72-72"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000008",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "73-73"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000009",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "74-74"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000010",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "75-75"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000011",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "76-76"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000012",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "77-77"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000013",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "78-78"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000014",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "79-79"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000015",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "80-80"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000016",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "81-81"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000017",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "82-82"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000018",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "83-83"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000019",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "84-84"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000020",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "85-85"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000021",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "148-148"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000022",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "149-149"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000023",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "150-150"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000024",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "151-151"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000025",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "152-152"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000026",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "153-153"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000027",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "154-154"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000028",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "155-155"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000029",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "156-156"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000030",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "157-157"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000031",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "158-158"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000032",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "159-159"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000033",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "160-160"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000034",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "161-161"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000035",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "162-162"
+    },
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:proc:000036",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "163-163"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "93-93"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "94-94"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000003",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "95-95"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000004",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "96-96"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000005",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "97-97"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000006",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "98-98"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000007",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "99-99"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000008",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "100-100"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000009",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "101-101"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000010",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "102-102"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000011",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "103-103"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000012",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "104-104"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000013",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "105-105"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000014",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "106-106"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000015",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "107-107"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000016",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "108-108"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000017",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "114-114"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000018",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "115-115"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000019",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "116-116"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000020",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "117-117"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000021",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "119-119"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000022",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "120-120"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000023",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "121-121"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000024",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "122-122"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000025",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "126-126"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000026",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "127-127"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000027",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "128-128"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000028",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "129-129"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000029",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "130-130"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000030",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "131-131"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000031",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "132-132"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000032",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "133-133"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000033",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "134-134"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000034",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "135-135"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000035",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "136-136"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000036",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "137-137"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000037",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "138-138"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000038",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "139-139"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000039",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "140-140"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:assign:000040",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "141-141"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:begin_end:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "173-178"
+    },
+    {
+      "kind": "block",
+      "type": "function",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:function:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "170-179"
+    },
+    {
+      "kind": "block",
+      "type": "function",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:function:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "181-183"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "190-197"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "201-201"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000003",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "202-202"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000004",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "203-203"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000005",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "204-204"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000006",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "205-205"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000007",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "206-206"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000008",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "207-207"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000009",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "208-208"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000010",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "209-209"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000011",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "210-210"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000012",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "211-211"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000013",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "212-212"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000014",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "213-213"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000015",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "214-214"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000016",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "215-215"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:inst:000017",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "216-216"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:assign_cluster:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "93-108"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:assign_cluster:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "114-141"
+    },
+    {
+      "kind": "group",
+      "type": "counter_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:counter_cluster:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "50-59"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:internal_signal:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "16-43"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:internal_signal:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "112-112"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:internal_signal:000003",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "172-172"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:port_section:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "4-9"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:reg_cluster:000001",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "50-61"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:reg_cluster:000002",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "69-85"
+    },
+    {
+      "kind": "group",
+      "type": "reg_cluster",
+      "id": "aes/aes_cipher_top/aes_cipher_top.v:grp:reg_cluster:000003",
+      "file": "aes/aes_cipher_top/aes_cipher_top.v",
+      "lines": "148-163"
+    }
+  ],
+  "related_docs": [
+    "aes/aes_cipher_top/aes_cipher_top.md"
+  ],
+  "variants_for_source_file": 6,
+  "variant_id": "3/6",
+  "effective_max_variants_per_file": 6,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

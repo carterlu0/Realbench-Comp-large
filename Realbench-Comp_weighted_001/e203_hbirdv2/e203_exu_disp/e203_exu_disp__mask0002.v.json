@@ -1,0 +1,331 @@
+{
+  "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+  "variant_index": 2,
+  "output_file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp__mask0002.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000010",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "span_lines": "242-250",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign disp_o_alu_rdidx = disp_i_rdidx;\n  assign disp_o_alu_info  = disp_i_info;  \n  \n    // Why we use precise version of disp_longp here, because\n    //   only when it is really dispatched as long pipe then allocate the OITF\n  assign disp_oitf_ena = disp_o_alu_valid & disp_o_alu_ready & disp_alu_longp_real;\n\n  assign disp_o_alu_imm  = disp_i_imm;\n  assign disp_o_alu_pc   = disp_i_pc;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000001",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "144-144"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000002",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "205-205"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000003",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "227-227"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000004",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "228-228"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000005",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "239-239"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000006",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "240-240"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000007",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "241-241"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000008",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "242-242"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000009",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "243-243"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000010",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "247-247"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000011",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "249-249"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000012",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "250-250"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000013",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "251-251"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000014",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "252-252"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000015",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "253-253"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000016",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "254-254"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000017",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "273-273"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000018",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "274-274"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000019",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "275-275"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000020",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "276-276"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000021",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "278-278"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000022",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "279-279"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000023",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "280-280"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000024",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "281-281"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000025",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "283-283"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000026",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "284-284"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000027",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "285-285"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000028",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "286-286"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:assign:000029",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "288-288"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifndef_block",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "258-272"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "227-228"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:assign_cluster:000002",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "239-254"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:assign_cluster:000003",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "273-288"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "227-228"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "114-130"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "133-136"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "142-143"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000004",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "178-178"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000005",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "199-201"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000006",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "207-207"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000007",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "231-232"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:internal_signal:000008",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "259-272"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_exu_disp/e203_exu_disp.v",
+      "lines": "30-110"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_exu_disp/e203_exu_disp.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "2/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

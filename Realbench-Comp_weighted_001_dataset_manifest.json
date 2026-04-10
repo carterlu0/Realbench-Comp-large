@@ -1,0 +1,40 @@
+{
+  "manifest_version": 1,
+  "release_name": "Realbench-Comp_weighted_001",
+  "created_at": "2026-03-26",
+  "dataset_id": "Realbench-Comp_weighted_001",
+  "dataset_dir": "Realbench-Comp_weighted_001",
+  "dataset_report_json": "Realbench-Comp_weighted_001_report.json",
+  "dataset_stats_json": "Realbench-Comp_weighted_001/mask_type_stats.json",
+  "dataset_manifest_json": "Realbench-Comp_weighted_001/dataset_manifest.json",
+  "all_samples_manifest_json": "Realbench-Comp_weighted_001/all_samples_manifest.json",
+  "dataset_summary_json": "Realbench-Comp_weighted_001/dataset_summary.json",
+  "global_exclusion_blacklist_json": "global_exclusion_blacklist.json",
+  "dataset_counts": {
+    "generated_questions": 200,
+    "verified_tasks": 200,
+    "simulation_function_pass_count": 0,
+    "excluded_forever_count": 0,
+    "normal_sim_only_count": 200,
+    "effective_active_count": 200,
+    "materialized_mask_file_count": 200,
+    "physically_removed_excluded_file_count": 0
+  },
+  "generation_config_snapshot": {
+    "task_scope": "core60",
+    "mode": "weighted",
+    "dataset_tag": "maincore_rich_v3",
+    "seed": 3,
+    "target_total_questions": 200,
+    "adaptive_variant_policy": "maincore_rich_v3",
+    "main_eval_filter": "strict"
+  },
+  "official_evaluation_policy": {
+    "normal_samples": {
+      "selection": "all released samples",
+      "rule": "Stop at simulation. If syntax=1 and function=1, mark success. Otherwise mark failure."
+    }
+  }
+}
+
+

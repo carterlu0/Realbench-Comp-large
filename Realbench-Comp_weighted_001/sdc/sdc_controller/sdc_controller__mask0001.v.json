@@ -1,0 +1,337 @@
+{
+  "file": "sdc/sdc_controller/sdc_controller.v",
+  "variant_index": 1,
+  "output_file": "sdc/sdc_controller/sdc_controller__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000005",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "span_lines": "310-325",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "sd_data_serial_host sd_data_serial_host_1(\n    .sd_clk         (sd_clk_o),\n    .rst            (wb_rst_i | software_reset_reg[0]),\n    .data_in        (data_out_tx_fifo),\n    .rd             (rd), \n    .data_out       (data_in_rx_fifo),\n    .we             (we_rx),\n    .DAT_oe_o       (sd_dat_oe_o),\n    .DAT_dat_o      (sd_dat_out_o),\n    .DAT_dat_i      (sd_dat_dat_i),\n    .start_dat      (start_dat_t),\n    .ack_transfer   (ack_transfer),\n    .busy_n         (busy_n),\n    .transm_complete(trans_complete ),\n    .crc_ok         (crc_ok)\n);\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sdc_controller/sdc_controller.v:proc:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "461-472"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "178-178"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000002",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "197-197"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000003",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "200-200"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000004",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "204-204"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000005",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "215-215"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000006",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "443-443"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000007",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "444-444"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000008",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "446-446"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000009",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "447-447"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000010",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "449-449"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000011",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "450-450"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000012",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "453-453"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000013",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "454-454"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000014",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "455-455"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000015",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "458-458"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sdc_controller/sdc_controller.v:assign:000016",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "477-477"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sdc_controller/sdc_controller.v:begin_end:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "461-472"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "208-213"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000002",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "222-249"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000003",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "252-267"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000004",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "270-307"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000005",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "310-325"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000006",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "328-340"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000007",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "342-353"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000008",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "356-374"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000009",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "376-393"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sdc_controller/sdc_controller.v:inst:000010",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "395-436"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "20-22"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000002",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "23-25"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000003",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "68-70"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000004",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "72-74"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000005",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "196-198"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000006",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "199-201"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000007",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "203-205"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000008",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "207-214"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sdc_controller/sdc_controller.v:pp_blk:000009",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "452-456"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:assign_cluster:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "443-450"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:assign_cluster:000002",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "453-455"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:internal_signal:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "78-174"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:internal_signal:000002",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "179-196"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:internal_signal:000003",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "217-220"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:internal_signal:000004",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "309-309"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sdc_controller/sdc_controller.v:grp:port_section:000001",
+      "file": "sdc/sdc_controller/sdc_controller.v",
+      "lines": "4-25"
+    }
+  ],
+  "related_docs": [
+    "sdc/sdc_controller/sdc_controller.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "1/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

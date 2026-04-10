@@ -1,0 +1,65 @@
+{
+  "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "question_type": "assign",
+      "id": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v:assign:000002",
+      "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+      "span_lines": "47-48",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign nice_csr_ready = 1'b1;\n  assign nice_csr_rdata = 32'b0;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v:assign:000001",
+      "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+      "lines": "47-47"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v:assign:000002",
+      "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+      "lines": "48-48"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+      "lines": "31-52"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+      "lines": "47-48"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_extend_csr/e203_extend_csr.v",
+      "lines": "33-44"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_extend_csr/e203_extend_csr.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 1,
+  "variant_id": "1/1",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

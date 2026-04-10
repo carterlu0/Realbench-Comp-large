@@ -1,0 +1,184 @@
+{
+  "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+  "variant_index": 1,
+  "output_file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "group",
+      "type": "handshake",
+      "question_type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "span_lines": "79-81",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  assign nice_i_ready   = nice_req_ready_pos & nice_o_ready  ;\n  // the nice isns is about to cmt when it is truly a valid nice insn and the nice core has accepted.\n  assign nice_o_valid   = nice_i_valid   & nice_req_ready_pos;\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "75-75"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000002",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "79-79"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000003",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "81-81"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000004",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "84-84"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000005",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "87-87"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000006",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "88-88"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000007",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "89-89"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000008",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "91-91"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000009",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "103-103"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:assign:000010",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "106-106"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:inst:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "108-121"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "29-124"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:assign_cluster:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "79-81"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:assign_cluster:000002",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "84-91"
+    },
+    {
+      "kind": "group",
+      "type": "assign_cluster",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:assign_cluster:000003",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "103-106"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:handshake:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "79-81"
+    },
+    {
+      "kind": "group",
+      "type": "handshake",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:handshake:000002",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "84-89"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "72-74"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "77-77"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "83-83"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:internal_signal:000004",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "94-102"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_exu_nice/e203_exu_nice.v",
+      "lines": "31-67"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_exu_nice/e203_exu_nice.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 2,
+  "variant_id": "1/2",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

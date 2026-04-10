@@ -1,0 +1,233 @@
+{
+  "file": "e203_hbirdv2/e203_core/e203_core.v",
+  "variant_index": 2,
+  "output_file": "e203_hbirdv2/e203_core/e203_core__mask0002.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "question_type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "span_lines": "376-450",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "  e203_ifu u_e203_ifu(\n    .inspect_pc   (inspect_pc),\n\n    .ifu_active      (ifu_active),\n    .pc_rtvec        (pc_rtvec),  \n\n    .itcm_nohold     (itcm_nohold),\n\n  `ifdef E203_HAS_ITCM //{\n    .ifu2itcm_holdup (ifu2itcm_holdup),\n    //.ifu2itcm_replay (ifu2itcm_replay),\n\n  // The ITCM address region indication signal\n    .itcm_region_indic (itcm_region_indic),\n\n    .ifu2itcm_icb_cmd_valid(ifu2itcm_icb_cmd_valid),\n    .ifu2itcm_icb_cmd_ready(ifu2itcm_icb_cmd_ready),\n    .ifu2itcm_icb_cmd_addr (ifu2itcm_icb_cmd_addr ),\n    .ifu2itcm_icb_rsp_valid(ifu2itcm_icb_rsp_valid),\n    .ifu2itcm_icb_rsp_ready(ifu2itcm_icb_rsp_ready),\n    .ifu2itcm_icb_rsp_err  (ifu2itcm_icb_rsp_err  ),\n    .ifu2itcm_icb_rsp_rdata(ifu2itcm_icb_rsp_rdata),\n  `endif//}\n\n  `ifdef E203_HAS_MEM_ITF //{\n    .ifu2biu_icb_cmd_valid  (ifu2biu_icb_cmd_valid),\n    .ifu2biu_icb_cmd_ready  (ifu2biu_icb_cmd_ready),\n    .ifu2biu_icb_cmd_addr   (ifu2biu_icb_cmd_addr ),\n    \n    .ifu2biu_icb_rsp_valid  (ifu2biu_icb_rsp_valid),\n    .ifu2biu_icb_rsp_ready  (ifu2biu_icb_rsp_ready),\n    .ifu2biu_icb_rsp_err    (ifu2biu_icb_rsp_err  ),\n    .ifu2biu_icb_rsp_rdata  (ifu2biu_icb_rsp_rdata),\n\n  `endif//}\n\n\n    .ifu_o_valid            (ifu_o_valid         ),\n    .ifu_o_ready            (ifu_o_ready         ),\n    .ifu_o_ir               (ifu_o_ir            ),\n    .ifu_o_pc               (ifu_o_pc            ),\n    .ifu_o_pc_vld           (ifu_o_pc_vld        ),\n    .ifu_o_misalgn          (ifu_o_misalgn       ), \n    .ifu_o_buserr           (ifu_o_buserr        ), \n    .ifu_o_rs1idx           (ifu_o_rs1idx        ),\n    .ifu_o_rs2idx           (ifu_o_rs2idx        ),\n    .ifu_o_prdt_taken       (ifu_o_prdt_taken    ),\n    .ifu_o_muldiv_b2b       (ifu_o_muldiv_b2b    ),\n\n    .ifu_halt_req           (wfi_halt_ifu_req),\n    .ifu_halt_ack           (wfi_halt_ifu_ack),\n    .pipe_flush_ack         (pipe_flush_ack      ),\n    .pipe_flush_req         (pipe_flush_req      ),\n    .pipe_flush_add_op1     (pipe_flush_add_op1  ),  \n    .pipe_flush_add_op2     (pipe_flush_add_op2  ),  \n  `ifdef E203_TIMING_BOOST//}\n    .pipe_flush_pc          (pipe_flush_pc),  \n  `endif//}\n\n                                 \n    .oitf_empty             (oitf_empty   ),\n    .rf2ifu_x1              (rf2ifu_x1    ),\n    .rf2ifu_rs1             (rf2ifu_rs1   ),\n    .dec2ifu_rden           (dec2ifu_rden ),\n    .dec2ifu_rs1en          (dec2ifu_rs1en),\n    .dec2ifu_rdidx          (dec2ifu_rdidx),\n    .dec2ifu_mulhsu         (dec2ifu_mulhsu),\n    .dec2ifu_div            (dec2ifu_div   ),\n    .dec2ifu_rem            (dec2ifu_rem   ),\n    .dec2ifu_divu           (dec2ifu_divu  ),\n    .dec2ifu_remu           (dec2ifu_remu  ),\n\n    .clk                    (clk_core_ifu  ),\n    .rst_n                  (rst_n         ) \n  );\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "376-450"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000002",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "486-620"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000003",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "638-753"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:inst:000004",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "756-907"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "33-40"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000002",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "81-103"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000003",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "172-196"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000004",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "198-223"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000005",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "225-247"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000006",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "249-272"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000007",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "275-307"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000008",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "324-334"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000009",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "357-359"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000010",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "384-398"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000011",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "400-410"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000012",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "431-433"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000013",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "488-495"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000014",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "559-561"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000015",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "603-615"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000016",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "675-693"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000017",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "695-714"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000018",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "732-749"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000019",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "779-798"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000020",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "862-882"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:pp_blk:000021",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "884-903"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:internal_signal:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "325-374"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:internal_signal:000002",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "454-484"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:internal_signal:000003",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "622-636"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "e203_hbirdv2/e203_core/e203_core.v:grp:port_section:000001",
+      "file": "e203_hbirdv2/e203_core/e203_core.v",
+      "lines": "31-321"
+    }
+  ],
+  "related_docs": [
+    "e203_hbirdv2/e203_core/e203_core.md",
+    "e203_hbirdv2/e203_xxxDesignSpecification.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "2/3",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

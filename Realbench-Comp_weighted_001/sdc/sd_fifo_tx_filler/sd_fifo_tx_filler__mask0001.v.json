@@ -1,0 +1,120 @@
+{
+  "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "question_type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "span_lines": "57-71",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "    if (rst) begin\n        offset <= 0;\n        we <= 8'h1;\n        m_wb_we_o <= 0;\n        m_wb_cyc_o <= 0;\n        m_wb_stb_o <= 0;\n        wr_tx <= 0;\n        ackd <= 1;\n        delay <= 0;\n        reset_tx_fifo <= 1;\n        first <= 1;\n        din <= 0;\n        m_wb_bte_o <= 2'b00;\n        m_wb_cti_o <= 3'b000;\n    end\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:proc:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "56-107"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:assign:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "53-53"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "57-71"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000002",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "75-81"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000003",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "82-84"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000004",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "86-91"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000005",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "93-98"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000006",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "72-99"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000007",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "100-106"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:begin_end:000008",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "56-107"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:inst:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "39-50"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:grp:internal_signal:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "28-36"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v:grp:port_section:000001",
+      "file": "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.v",
+      "lines": "3-24"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_fifo_tx_filler/sd_fifo_tx_filler.md"
+  ],
+  "variants_for_source_file": 1,
+  "variant_id": "1/1",
+  "effective_max_variants_per_file": 2,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

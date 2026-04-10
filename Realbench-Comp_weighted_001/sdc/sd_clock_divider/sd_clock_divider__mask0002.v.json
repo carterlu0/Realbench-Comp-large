@@ -1,0 +1,113 @@
+{
+  "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+  "variant_index": 2,
+  "output_file": "sdc/sd_clock_divider/sd_clock_divider__mask0002.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "question_type": "begin_end",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:begin_end:000002",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "span_lines": "30-33",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": " else if (ClockDiv == DIVIDER )begin\n    ClockDiv  <= 0;\n    SD_CLK_O <=  ~SD_CLK_O;\n end else begin\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:proc:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "24-38"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:assign:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "21-21"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:begin_end:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "26-29"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:begin_end:000002",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "30-33"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:begin_end:000003",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "33-36"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:begin_end:000004",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "25-38"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:inst:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "13-16"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:pp_blk:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "12-17"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:pp_blk:000002",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "11-18"
+    },
+    {
+      "kind": "block",
+      "type": "pp_ifdef_block",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:pp_blk:000003",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "20-22"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:grp:internal_signal:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "9-12"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_clock_divider/sd_clock_divider.v:grp:port_section:000001",
+      "file": "sdc/sd_clock_divider/sd_clock_divider.v",
+      "lines": "3-6"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_clock_divider/sd_clock_divider.md"
+  ],
+  "variants_for_source_file": 2,
+  "variant_id": "2/2",
+  "effective_max_variants_per_file": 3,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

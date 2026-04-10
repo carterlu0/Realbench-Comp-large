@@ -1,0 +1,85 @@
+{
+  "file": "sdc/sd_crc_7/sd_crc_7.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_crc_7/sd_crc_7__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "question_type": "begin_end",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:begin_end:000002",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "span_lines": "21-29",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "\t\t\tif (Enable==1) begin\n\t\t\t\tCRC[6] <= CRC[5];\n\t\t\t\tCRC[5] <= CRC[4];\n\t\t\t\tCRC[4] <= CRC[3];\n\t\t\t\tCRC[3] <= CRC[2] ^ inv;\n\t\t\t\tCRC[2] <= CRC[1];\n\t\t\t\tCRC[1] <= CRC[0];\n\t\t\t\tCRC[0] <= inv;\n\t\t\tend\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:proc:000001",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "15-31"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:assign:000001",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "12-12"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:begin_end:000001",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "16-19"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:begin_end:000002",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "21-29"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:begin_end:000003",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "20-30"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:begin_end:000004",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "15-31"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:grp:internal_signal:000001",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "8-10"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_crc_7/sd_crc_7.v:grp:port_section:000001",
+      "file": "sdc/sd_crc_7/sd_crc_7.v",
+      "lines": "2-6"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_crc_7/sd_crc_7.md"
+  ],
+  "variants_for_source_file": 3,
+  "variant_id": "1/3",
+  "effective_max_variants_per_file": 4,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}

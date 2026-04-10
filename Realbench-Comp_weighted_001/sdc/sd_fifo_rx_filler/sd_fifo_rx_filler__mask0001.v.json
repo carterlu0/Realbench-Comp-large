@@ -1,0 +1,106 @@
+{
+  "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+  "variant_index": 1,
+  "output_file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler__mask0001.v",
+  "mode": "weighted",
+  "masked": [
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "question_type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000002",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "span_lines": "71-78",
+      "region": "whole",
+      "parent_group_type": null,
+      "parent_group_id": null,
+      "answer": "            if (!empty & wb_free) begin\n                rd <= 1;\n                m_wb_dat_o <= #1 dat_o;\n                m_wb_we_o <= #1 1;\n                m_wb_cyc_o <= #1 1;\n                m_wb_stb_o <= #1 1; \n                wb_free <= 0;   \n            end\n"
+    }
+  ],
+  "all_units": [
+    {
+      "kind": "block",
+      "type": "always",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:proc:000001",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "54-97"
+    },
+    {
+      "kind": "block",
+      "type": "assign",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:assign:000001",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "51-51"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000001",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "55-66"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000002",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "71-78"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000003",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "80-86"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000004",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "67-87"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000005",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "88-96"
+    },
+    {
+      "kind": "block",
+      "type": "begin_end",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:begin_end:000006",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "54-97"
+    },
+    {
+      "kind": "block",
+      "type": "instantiation",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:inst:000001",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "37-48"
+    },
+    {
+      "kind": "group",
+      "type": "internal_signal",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:grp:internal_signal:000001",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "30-34"
+    },
+    {
+      "kind": "group",
+      "type": "port_section",
+      "id": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v:grp:port_section:000001",
+      "file": "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.v",
+      "lines": "5-26"
+    }
+  ],
+  "related_docs": [
+    "sdc/sd_fifo_rx_filler/sd_fifo_rx_filler.md"
+  ],
+  "variants_for_source_file": 4,
+  "variant_id": "1/4",
+  "effective_max_variants_per_file": 4,
+  "adaptive_variant_policy": "maincore_rich_v3"
+}
